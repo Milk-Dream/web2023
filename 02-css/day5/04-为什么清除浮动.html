@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*清除浮动的第2种方法:overflow*/
+        .f {
+            border: 1px solid #000;
+        }
+        /*清除浮动的第3种方法:父级添加after伪元素*/
+        .clear::after{
+            content:"";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /*清除浮动的第4种方法:父级添加双伪元素*/
+        .clear::before,
+        .clear::after {
+            content:"";
+            display: table;
+        }
+        .chear::after {
+            clear: both;
+        }
+        .s {
+            float: left;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!--父盒子不方便给高度，高度不确定，我们又想让盒子撑开-->
+    <div class="f">
+        <div class="s"></div>
+        <div class="s"></div>
+        <div class="s"></div>
+        <div class="s box"></div>
+        <!--隔墙法，必须是块元素，在浮动元素最后一个添加一个-->
+        <!-- <div style="clear: both;"></div> -->
+        <p></p>
+    </div>
+</body>
+
+</html>

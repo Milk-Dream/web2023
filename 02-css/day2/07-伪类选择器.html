@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        /*伪类选择器:鼠标经过改变背景颜色*/
+        /*伪类前面可以跟任何选择器*/
+        div:hover {
+            background-color: red;
+        }
+        /*focus 选择器 表单元素获取焦点(光标)触发*/
+        /*表单元素获取光标的有
+        文本框 密码框 文本域*/
+        input:focus {
+            color: red;
+        }
+
+        /*第一步:先设置链接的颜色*/
+        a {
+            color: #666;
+        }
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <input type="text" value="请输入用户名">
+    <a href="#">链接</a>
+</body>
+</html>

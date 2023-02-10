@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            
+        }
+        ul {
+            width: 600px;
+            margin: 100px auto;
+            
+            
+        }
+        ul li {
+            float: left;
+            width: 125px;
+            height: 50px;
+            perspective: 800px;
+            /* margin-right: 10px; */
+            
+            
+        }
+        .box {
+            transform-style: preserve-3d;
+            position: relative;
+            width: 125px;
+            height: 50px;
+            transition: all .6s;
+            
+        }
+
+        .first,
+        .two {
+            position: absolute;
+            left: 0;
+            top: 0;
+            
+            width: 125px;
+            height: 50px;
+            background-color: #008100;
+        }
+        .first {
+            transform: rotateX(-90deg) translateZ(25px);
+            
+            background-color: #ffa500;
+        }
+        .two {
+            transform: translateZ(25px);
+            
+        }
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <!--先不要用li替换box这个盒子-->
+            <div class="box">
+                <div class="first">index</div>
+                <div class="two">首页</div>
+            </div>
+        </li>
+        <li>
+            <!--先不要用li替换box这个盒子-->
+            <div class="box">
+                <div class="first">index</div>
+                <div class="two">首页</div>
+            </div>
+        </li>
+        <li>
+            <!--先不要用li替换box这个盒子-->
+            <div class="box">
+                <div class="first">index</div>
+                <div class="two">首页</div>
+            </div>
+        </li>
+        <li>
+            <!--先不要用li替换box这个盒子-->
+            <div class="box">
+                <div class="first">index</div>
+                <div class="two">首页</div>
+            </div>
+        </li>
+        
+    </ul>
+</body>
+</html>

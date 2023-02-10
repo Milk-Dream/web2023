@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+        }
+
+        .box ul {
+            width: 1800px;
+            animation: move 5s linear infinite forwards;
+        }
+
+        img {
+            
+            width: 200px;
+            height: 112px;
+        }
+
+        .box {
+            width: 600px;
+            height: 112px;
+            border: 5px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        /*无缝动画:技巧:复制前面的图到后面做替身(为了让显示区域不留白)*/
+
+        /*复制图的个数看显示区域能显示几张*/
+
+        /*用户体验*/
+        /*鼠标移入描边范围:动画暂停*/
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+
+            to {
+                transform: translateX(-1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="./img/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpeg" alt="">
+            </li>
+
+            <li>
+                <img src="./img/product.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./img/product.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

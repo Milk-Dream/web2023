@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //单分支语句
+        if (true) {
+            console.log("执行语句")
+        }
+
+        if (0) {
+            console.log("这句话永远不会执行")
+        }
+
+        //除了""所有的字符串都为真
+        if ("") {
+            console.log("这句话永远不会执行")
+        }
+
+        //1.用户输入
+        let score = +prompt("请输入成绩")
+        //2.进行判断输出
+        if(score > 700) {
+            alert("共享考入黑马程序员")
+        }
+    </script>
+</body>
+</html>

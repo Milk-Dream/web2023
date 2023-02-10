@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menkuang {
+            width: 500px;
+            height: 800px;
+            border: 1px solid #000000;
+            margin: 0px auto;
+            perspective: 1000px;
+        }
+        .left, .right {
+            width: 248px;
+            height: 100%;
+            background-color: #ccc;
+            transition: all 1s;
+        }
+        .left {
+            float: left;
+            transform-origin: left center;
+        }
+        .right {
+            float: right;
+            transform-origin: right center;
+        }
+        .menkuang:hover .left {
+            transform: rotateY(60deg);
+        }
+        .menkuang:hover .right {
+            transform: rotateY(-60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="menkuang">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

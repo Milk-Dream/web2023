@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "123"
+        console.log(Number(str))
+        //下面两个都可以转换成数字型
+        let num1 = +prompt("请输入你的年薪")
+        let num2= Number(prompt("请输入你的年薪"))
+
+        console.log(parseInt("12.34px"))//12
+        console.log(parseInt("12px"))//12
+        console.log(parseInt("abc12.34"))//NaN
+
+        //0-0-0-0-0-0-0-0-0-0-0-0-0-0-
+        console.log(parseFloat("12.34px"))//12.34
+        console.log(parseFloat("12px"))//12
+        console.log(parseFloat("abc123"))//NaN
+        
+    </script>
+</body>
+</html>

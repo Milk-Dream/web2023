@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /*
+        @keyframes 动画名 {
+            form {
+                动画开始时候盒子的状态
+            }
+            to {
+                动画结束时盒子的状态
+            }
+        }*/
+        /*定义动画*/
+        @keyframes move {
+            /*动画序列:有多少个动画序列 动画过程中就有一个状态*/
+            0% {
+                transform: translate(0);
+            }
+            
+            100% {
+                transform: translate(500px);
+            }
+        }
+        /*使用动画*/
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*动画名称是必须写的属性*/
+            animation-name: move;
+            /*动画时长 必须写的属性*/
+            animation-duration: 5s;
+            /*动画何时开始时间*/
+            animation-delay: 1s;
+            /*动画执行完毕的状态:forwards最后一帧状态，backwards:第一帧状态*/
+            animation-fill-mode: forwards;
+            /*速度曲线:linear匀速 steps(5)逐帧动画ease*/
+            animation-timing-function: steps(5);
+            /*重复次数:可以直接给数字infinite无限循环*/
+            animation-iteration-count: infinite;
+            /*动画执行方向 动画逆向播放alternate*/
+            animation-direction: alternate;
+        }
+        div:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

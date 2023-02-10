@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+            
+        }
+
+        .box:hover {
+            /*电脑是平面的，无法直接演示z轴移动效果:离得近或者远*/
+            /* transform: translate3d(100px, 200px, 200px); */
+            transform: translateX(100px) translateY(200px) translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

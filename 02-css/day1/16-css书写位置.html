@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*嵌入式 平常讲课常用*/
+        /*能控制当前页面*/
+        /*书写方便*/
+        /*结构样式分离(并没有完全分离)*/
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <!--外链式 做项目时候都是外链式-->
+    <!--1.能控制多个页面(css文件可以被多个html文件引入)-->
+    <!--2.书写方便-->
+    <!--3.结构样式完全分离-->
+    <!--4.需要创建文件需要引入，性能低-->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!--行内式 很少用-->
+    <!--1.只能控制当前标签-->
+    <!--2.书写不方便-->
+    <div style="color: red;">你好</div>
+    <p>你好</p>
+    <span>你好</span>
+</body>
+</html>

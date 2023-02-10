@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.用户输入 2个数字+操作符 + - * /
+        let num1 = +prompt("请输入第一个数字:")
+        let num2 = +prompt("请输入第二个数字:")
+        let sp = prompt("请你输入+-*/其中一个")
+        switch(sp) {
+            case "+":
+                alert(`两个数字的加法操作是${num1 + num2}`)
+                break
+            case "-":
+                alert(`两个数字的减法操作是${num1 - num2}`)
+                break
+            case "*":
+                alert(`两个数字的乘法操作是${num1 * num2}`)
+                break
+            case "/":
+                alert(`两个数字的除法操作是${num1 / num2}`)
+                break
+            default:
+                alert("你干啥列，请输入为+、-、*、/")
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 20px;
+            width: 200px;
+            height: 200px;
+
+        }
+        .xd {
+            background-color: pink;
+        }
+        .xe {
+            background-color: red;
+            z-index: 2;/*不能加单位*//*只有定位的盒子才有z-index*/
+        }
+        .gtq {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--z-index来控制前后次序-->
+    <!--数值可以是负数或0默认是auto-->
+    <div class="box xd"></div>
+    <div class="box xe"></div>
+    <div class="box gtq"></div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*嵌套元素塌陷解决方案*/
+        /*1.border，至少上边框*/
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color:pink;
+            margin-top: 200px;
+            /* border: 1px solid transparent; */
+            /*2.内边距，至少上边距*/
+            /* padding: 1px; */
+            /*3.overflow*/
+            overflow: hidden;
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

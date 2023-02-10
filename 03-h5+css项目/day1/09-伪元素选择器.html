@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        /*伪元素生成的是行内标签*/
+        /*before是在盒子内容前面*/
+        /*单冒号也可以，但是一般双冒号*/
+        div::before {
+            /*必须属性，里面可以有值，也可以为空*/
+            content:"我"
+        }
+        /*after是在盒子的内容后面*/
+        div::after {
+            content: "小黑";
+        }
+    </style>
+</head>
+<body>
+    <div>
+        是
+    </div>
+</body>
+</html>

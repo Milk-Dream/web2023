@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="表单数据提交的url" method="提交的方式get post" name="表单的名字"></form> -->
+    <!--后期学服务器相关知识的时候还会讲-->
+    <!--目前这三个属性写或者不写不影响页面显示效果-->
+    <form action="表单数据提交的url" method="提交的方式get post" name="表单的名字">
+        用户名:<input type="text" name="username" value="请输入用户名"><br>
+        密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pwd"><br>
+        <!--单选框和复选框要有相同的name-->
+        性别:<input type="radio" checked name="sex" value="男">男<input type="radio" name="sex" value="女">女
+        爱好:<input type="checkbox" checked name="hobby" value="打豆豆">打豆豆<input type="checkbox" name="hobby" value="吃饭">吃饭
+        <!--啥时候写name，单选按钮(其他不写)-->
+        <!--啥时候写value，文本框做提示用的-->
+
+        <!--name value复杂讲-->
+        <!--需要把表单控件的值提交到服务器需要添加name属性-->
+        <!--如果没有name属性后台接收不到表单的数据-->
+        <!--提交按钮可以不给-->
+        <!--一个表单中name属性值不能相同(单选和复选框同一组必须相同)-->
+        <!--value在文本框当做提示信息(实际开发中不是value)-->
+        <!--value在单选或者复选框中value属性值填的是什么提交到服务器就是什么-->
+        <!--普通的点击按钮-->
+        <input type="button" value="获取验证码">
+        <!--上传文件 文件域-->
+        <input type="file">
+        <!--隐藏域 在页面中不显示-->
+        <input type="hidden">
+        <!--图像形式的提交按钮-->
+        <input type="image" src="./img/sub-btn.jpg">
+
+        <input type="submit" name="submit" value="注册">
+        <input type="reset" value="重新填写">
+    </form>
+</body>
+</html>

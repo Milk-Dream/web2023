@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*box-shadow:h-shadow水平距离v-shadow:垂直距离，
+        blur模糊距离，spread阴影尺寸color阴影颜色 inset内阴影，outset外阴影不可以写*/
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            
+        }
+        /*原先盒子没有阴影，当我们鼠标经过有阴影*/
+        div:hover {
+            box-shadow: 10px 10px 10px -4px rgba(0,0,0,.5) inset;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

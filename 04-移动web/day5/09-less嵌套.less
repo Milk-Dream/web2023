@@ -1,0 +1,18 @@
+.father {
+    color: red;
+    .son {
+        width: 100px;
+    }
+
+    a {
+        color: green;
+        /*&表示当前选择器:写在哪个选择器里面就是谁(不会生成后代选择器)*/
+        &:hover {
+            color: white;
+        }
+    }
+
+    a:hover {
+        color: orange;
+    }
+}

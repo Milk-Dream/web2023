@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            animation-name: change1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            /*
+                animation-name 动画名称
+                animation-duration 动画持续时间
+                animation-delay 动画延迟时间
+                animation-fill-mode 动画执行完毕时状态
+                animation-timing-function 速度曲线
+                animation-itearation-count 重复次数
+                animation-direction 动画执行方向
+                animation-play-state 暂停动画
+            */
+        }
+
+        /*一.定义动画:从200到600*/
+        @keyframes change {
+            from {
+                width: 300px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+
+        @keyframes change1 {
+            0% {
+                width: 200px;
+            }
+
+            35% {
+                width: 500px;
+                height: 300px;
+            }
+
+            100% {
+                width: 800px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

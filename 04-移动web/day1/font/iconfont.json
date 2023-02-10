@@ -1,0 +1,23 @@
+{
+  "id": "3856012",
+  "name": "黑马",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15838547",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "15838554",
+      "name": "zoom-out",
+      "font_class": "zoom-out",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    }
+  ]
+}

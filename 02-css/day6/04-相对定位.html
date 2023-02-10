@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yeye {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: red;
+            overflow: hidden;
+        }
+        .father {
+            
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin-top: 400px;
+        }
+        .son {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--绝对定位如果没有父元素，或者祖先元素没有元素定位以浏览器为准-->
+    <!--如果绝对定位父元素有定位(相对绝对固定)则以最近一级定位-->
+    <div class="yeye">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            overflow: hidden;
+            position: relative;
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            background: url(./img/pic.jpg) no-repeat;
+            background-size: 1366px 600px;
+            
+
+        }
+        .box::before,
+        .box::after {
+            position: absolute;
+            top: 0;
+            content:"";
+            width: 50%;
+            height: 100%;
+            transition: all 1s;
+
+        }
+        .box::before {
+            
+            
+            left: 0;
+            content:"";
+            
+            background-image: url(./img/left.png);
+        }
+        .box::after {
+            
+            right: 0;
+            content:"";
+            background-image: url(./img/right.png);
+        }
+        .box:hover::before {
+            transform: translate(-100%);
+        }
+        .box:hover::after {
+            transform: translate(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

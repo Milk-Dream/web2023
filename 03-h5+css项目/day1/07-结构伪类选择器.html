@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*选中li的父盒子中第一个子元素，并且第一个子元素是li标签*/
+        ul li:first-child {
+            background-color: red;
+        }
+        ul li:last-child {
+            background-color: green;
+        }
+        /*n可以是数字，n此时从1开始查*/
+        ul li:nth-child(3) {
+            background-color: pink;
+        }
+        /*even 偶数*/
+        /*odd 奇数*/
+        ul li:nth-child(even) {
+            color: aqua;
+        }
+        /*n 可以是公式，n此时从0开始*/
+        /*2n是偶数*/
+        /*2n+1或者2n-1都是奇数*/
+        /*5n 5 10 15*/
+        /*n+5从第5个开始*/
+        /*-n+5前5个(包含第5个)*/
+        ul li:nth-child(2n) {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--常用于父级选择器里面的子元素-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

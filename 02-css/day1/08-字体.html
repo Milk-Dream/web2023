@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .size {
+            /*谷歌浏览器默认字体大小是16px*/
+            font-size: 24px;
+        }
+        body {
+            /*由于不同浏览器字体大小不一样，为了统一给body设置字体大小*/
+            font-size: 16px;
+        }
+        h1 {
+            /*400是不加粗=normal 700是加粗=bold*/
+            font-weight: 400;
+        }
+        span {
+            font-weight: 700;
+            font-style: italic;
+        }
+        em {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="size">是不是被渲染了</div>
+    <h1 class="size">标题</h1>
+    <span>hello</span>
+    <em>我</em>
+</body>
+</html>

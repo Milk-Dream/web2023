@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2.求1~100累加和
+        function getSum(end) {
+            let sum = 0
+            for (let i = 1; i <= end; i++) {
+                sum += i
+            }
+            console.log(sum)
+        }
+
+        getSum(50) //1~50
+        getSum(100)//1~100
+        //形参 形式上的参数
+        function getSum1(start, end) {
+            let sum = 0
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            console.log(sum)
+        }
+
+        //实参
+        getSum1(1, 50)
+        getSum1(100, 200)
+
+        //函数传递参数的好处是?
+        //可以极大的提高了函数的灵活性
+        //函数声明的时候，小括号里面是形参
+        //函数调用的时候，小括号里面是实参
+        
+    </script>
+</body>
+</html>

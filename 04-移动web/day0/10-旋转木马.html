@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 800px;
+        }
+        section {
+            transform-style: preserve-3d;
+            width: 275px;
+            height: 155px;
+            margin: 100px auto;
+            transition: all 3s;
+            
+            
+        }
+        section div {
+            position: absolute;
+            width: 200px;
+            height: 155px;
+            top: 0;
+            left: 0;
+        }
+        section div:nth-child(1){
+            background-color: pink;
+            transform: rotateY(0deg) translateZ(250px);
+        }
+        section div:nth-child(2){
+            background-color: red;
+            transform: rotateY(60deg) translateZ(250px);
+        }
+        section div:nth-child(3){
+            background-color: green;
+            transform: rotateY(120deg) translateZ(250px);
+        }
+        section div:nth-child(4){
+            background-color: skyblue;
+            transform: rotateY(180deg) translateZ(250px);
+        }
+        section div:nth-child(5){
+            background-color: gray;
+            transform: rotateY(240deg) translateZ(250px);
+        }
+        section div:nth-child(6){
+            background-color: purple;
+            transform: rotateY(300deg) translateZ(250px);
+        }
+        section:hover {
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

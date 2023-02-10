@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /*添加视距到父级上面*/
+            perspective: 1000px;
+        }
+        .box {
+            /*3d呈现必须加在父盒子上面*/
+            transform-style: preserve-3d;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        .f {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+
+        }
+        .t {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: purple;
+            transform: rotateX(30deg);
+        }
+        .box:hover {
+            transform: rotateY(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <!--父盒子也有3d转换 子盒子也有3d转换，这个时候要给父亲盒子添加3d呈现，要不子盒子没有3d转换效果-->
+    <div class="box">
+        <div class="f"></div>
+        <div class="t"></div>
+    </div>
+</body>
+</html>

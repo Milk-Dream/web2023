@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*上下外边距的时候可能会出现外边距塌陷合并*/
+        .top,
+        .bottom {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .top {
+            margin-bottom: 30px;
+        }
+        .bottom {
+            margin-top: 20px;
+        }
+        span {
+            margin-right: 30px;
+        }
+        em {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">1</div>
+    <div class="bottom">2</div>
+    <span>111</span>
+    <em>222</em>
+</body>
+</html>

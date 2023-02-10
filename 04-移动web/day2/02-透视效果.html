@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /*perspective添加给父级，数值一般在800-1200*/
+            /*取值越小近大远小的效果更明显，取值越大近大远小的效果越不明显*/
+            perspective: 1000px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .box:hover {
+            transform: translateZ(-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fixed {
+            position: fixed;
+            left: 50%;
+            /*左边偏移只能用margin-left，
+            右边偏移只能用margin-right*/
+            margin-left: 400px;
+            width: 50px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .w {
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!--固定小技巧，固定在版心右侧-->
+    <!--想让其left50%，再margin-left:版心的一半-->
+    <div class="fixed"></div>
+    <div class="w">版心盒子800像素</div>
+</body>
+</html>

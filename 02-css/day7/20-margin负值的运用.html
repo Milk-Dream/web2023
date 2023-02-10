@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            float: left;
+            list-style: none;
+            width: 100px;
+            height: 150px;
+            border: 1px solid #000;
+            margin-left: -1px;
+        }
+        ul li:hover {
+            /*如果盒子没有定位，增加相对定位即可*/
+            position: relative;
+            border: 1px solid red;
+            /*如果有定位，加z-index即可*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

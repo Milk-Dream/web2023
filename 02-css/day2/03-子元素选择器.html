@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*10次中 9次用后代 1次用子元素*/
+        .nav p > a {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">a标签</a>
+        <p>
+            <a href="#">a标签</a>
+            <span>
+                <a href="#">重孙子</a>
+            </span>
+        </p>
+        <a href="#">a标签</a>
+    </div>
+</body>
+</html>

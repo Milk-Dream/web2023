@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f {
+            /*2.添加overflow:hidden*/
+            /* overflow: hidden; */
+            border: 1px solid #000;
+        }
+        /*3.给父级添加伪元素*/
+        .clearfix::after {
+            content:"";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /*4.给父级添加双伪元素*/
+        .clearfix::before,
+        .clearfix::after {
+            content:"";
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        .s {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        /*1.添加块元素，清除浮动*/
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="f">
+        <div class="s">1</div>
+        <div class="s">2</div>
+        <div class="s">3</div>
+        <div class="s">4</div>
+        <p></p>
+    </div>
+</body>
+</html>
