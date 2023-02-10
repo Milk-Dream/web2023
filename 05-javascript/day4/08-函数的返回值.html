@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //函数的返回值
+        function fn() {
+            return 20
+        }
+
+        console.log(fn())
+
+        let num = prompt("请输入数字0")
+        let re = fn()
+        console.log(re)
+
+        function getTotalPrice(x, y) {
+            return x + y 
+            
+        }
+
+        let sum = getTotalPrice(1, 2)
+        console.log(sum)
+
+        //求和的函数写法
+        function getTotalPrice(x, y) {
+            return x + y //碰到return就直接结束函数
+            console.log(111)
+        }
+
+        let sum1 = getTotalPrice(1, 2)
+        console.log(sum1)
+
+        //求和的函数写法
+        function getTotalPrice(x, y) {
+            return 
+            x + y //return语句不能换行写，否则返回undefined
+            
+        }
+
+        function fn() {
+
+        }
+
+        let re1 = fn()
+        console.log(re1)//undefined
+
+    </script>
+</body>
+</html>
