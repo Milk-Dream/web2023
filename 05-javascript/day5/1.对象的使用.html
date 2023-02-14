@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.声明对象
+        let pink = {
+            uname: "pink老师",
+            age: 18,
+            gender: "女"
+        }
+
+        console.log(pink);
+        console.log(typeof pink);
+
+        //查 对象名.属性名
+        console.log(pink.age);
+
+        //改 把性别女改成男
+        pink.gender = "男"
+        console.log(pink);
+
+        //增加
+        pink.hobby = "足球"
+        console.log(pink)
+
+        //删除
+        delete pink.uname
+        console.log(pink);
+
+        let obj = {
+            goods: "小米10青春版",
+            address: "中国大陆",
+            weight: "0.55kg",
+            num: "100012816024"
+        }
+
+        //2.使用书写 查 对象名.属性名
+        console.log(obj.address);
+        console.log(obj.goods);
+
+    </script>
+</body>
+</html>

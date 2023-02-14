@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(x, y) {
+            x = x || 0
+            y = y || 0
+            console.log(x + y)
+        }
+
+        fn(1, 2)
+        fn() // NaN
+
+        console.log(false && alert(1))//alert(1)不执行
+        console.log(true || alert(1))//alert(1)不执行
+        //逻辑中断或者叫做逻辑短路
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function transformTime(seconds) {
+            //计算时分秒，里面含数字补零
+            let h = parseInt(seconds / 60 / 60 % 24)
+            let m = parseInt(seconds / 60 % 60)
+            let s = parseInt(seconds % 60)
+            h = h < 10 ? "0" + h : h
+            m = m < 10 ? "0" + m : m
+            s = s < 10 ? "0" + s : s
+            return `${h}时${m}分${s}秒`
+        }
+
+        //用户输入总秒数
+        let seconds = +prompt("请输入总秒数:")
+        let time = transformTime(seconds)
+        //打印输出
+        alert("转换后的时间:"+time)
+    </script>
+</body>
+</html>

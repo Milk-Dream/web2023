@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        //立即执行函数的作用:防止变量污染
         // let num = 10
         //分号写前面后面都可以
         let num = 20
@@ -20,6 +21,8 @@
             let num = 10
             console.log(11)
         })()
+
+        (function(){}(1, 2))
     </script>
 </body>
 </html>

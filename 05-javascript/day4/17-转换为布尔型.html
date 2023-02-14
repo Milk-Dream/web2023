@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Boolean("pink"))
+        console.log(Boolean(""))
+        console.log(Boolean(0.1))
+        console.log(Boolean(-10))
+        console.log(Boolean(1))
+        //-----都为假
+        console.log(Boolean(0))
+        console.log(Boolean(undefined))
+        console.log(Boolean(null))
+        console.log(Boolean(NaN))
+        console.log(Boolean(false))
+        //有字符串的加法"" + 1 结果是 "1"
+        //减法- (像大多数数学运算一样)只能用于数字，他会使空字符串"" 转换为 0
+        // alert(-"")//0
+        //null经过数字转换之后会变成0
+        //undefined 经过数字转换之后会变成NaN
+    </script>
+</body>
+</html>
