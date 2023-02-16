@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandom(N, M) {
+            let random = Math.floor(Math.random() * (M - N + 1) + N)
+            return random
+        }
+        function getRandomColor(flag) {
+            
+            if (flag) {
+                //16进制
+                let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "h", "y", "z"]
+                return `#${arr[getRandom(0, arr.length - 1)]}${arr[getRandom(0, arr.length - 1)]}${arr[getRandom(0, arr.length - 1)]}${arr[getRandom(0, arr.length - 1)]}${arr[getRandom(0, arr.length - 1)]}${arr[getRandom(0, arr.length - 1)]}`
+            } else {
+                //rgba
+                return `rgb(${getRandom(0, 255)}, ${getRandom(0, 255)}, ${getRandom(0, 255)})`
+            }
+        }
+
+        alert(getRandomColor(true))
+    </script>
+</body>
+</html>
