@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: url(./images/course01.png) no-repeat top center center/cover;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //随机数函数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1) + N)
+        }
+        //随机数
+        const random = getRandom(1, 8)
+        document.body.style.backgroundImage = "url('./images/course0"+ random +".png')"
+
+    </script>
+</body>
+</html>

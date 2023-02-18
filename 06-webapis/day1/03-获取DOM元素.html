@@ -22,8 +22,24 @@
         console.log(box);
         const nav = document.querySelector("#nav")
         console.log(nav);
+        nav.style.color = "red"
         const li = document.querySelector("ul li:first-child")
         console.log(li);
+
+        //选择匹配多个，返回NodeList，得到的是一个伪数组，没有长度，没有pop、push
+        const lis = document.querySelectorAll("ul li")
+
+        //1.获取元素
+        const lisArr = document.querySelectorAll(".nav li")
+        console.log(lisArr);
+        for (let i = 0; i < lisArr.length; i++) {
+            console.log(lisArr[i]);//每一个小li对象
+        }
+
+        //其他以前的写法
+        // document.getElementById()
+        // document.getElementsByTagName()
+        // document.getElementsByClassName()
 
     </script>
 </body>
