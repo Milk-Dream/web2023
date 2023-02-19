@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        .slider img{
+            
+            width: 300px;
+            height: 200px;
+
+        }
+
+        .slider-footer {
+            
+            width: 300px;
+            height: 10px;
+            opacity: 0.8;
+
+        }
+
+        .slider-footer ul {
+            position: absolute;
+            
+            z-index: 99;
+            width: 300px;
+            height: 10px;
+            bottom: 10px;
+            left: 10px;
+            list-style: none;
+        }
+
+        .slider-footer ul li {
+            margin-right: 6px;
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #CCC;
+        }
+
+        .slider-footer ul li.active {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img src="./images/course01.png" alt="">
+        
+        <div class="slider-footer">
+            <p></p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        //随机数函数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1) + N)
+        }
+
+        let sliderData = [
+            { url: "./images/course01.png", title: "课程1" },
+            { url: "./images/course02.png", title: "课程2" },
+            { url: "./images/course03.png", title: "课程3"},
+            { url: "./images/course04.png", title: "课程4" },
+            { url: "./images/course05.png", title: "课程5" }
+        ]
+
+        //1.需要一个随机数
+        const random = parseInt(Math.random() * sliderData.length)
+        console.log(sliderData[random].url);
+        //2.把对应的数据渲染到标签里面
+        //2.1获取图片
+        const img = document.querySelector(".slider img")
+
+        //2.2修改图片路径
+        img.src = sliderData[random].url
+        //3.把p里面的文字更换
+        //3.1获取p
+        const p = document.querySelector(".slider p")
+        //3.2修改p
+        p.innerHTML = sliderData[random].title
+
+        const li = document.querySelector(".slider-footer ul li:nth-child(" + (random+1) + ")")
+        //让当前这个li添加active这个类
+        li.classList.add("active")
+    </script>
+</body>
+</html>
