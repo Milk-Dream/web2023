@@ -7,13 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    <div data-sum="sum" data-id="01">1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
     <script>
-        const arr = ["red", "pink"]
-        arr.push("blue")
-        console.log(arr)
-        const a = 10
-        a = 10//错误的
-        console.log(a)
+        const one = document.querySelector("div")
+        console.log(one.dataset);
+        console.log(one.dataset.sum);
+        one.dataset.sum = "SSS"
+        
     </script>
 </body>
 </html>

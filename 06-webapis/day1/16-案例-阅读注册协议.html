@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10">
+        欢迎申请使用传智公司的产品
+    </textarea>
+    <button class="btn" disabled>我已经阅读用户协议(60)</button>
+    <script>
+        //1.获取元素
+        const btn = document.querySelector(".btn")
+        //2.倒计时
+        let i = 6
+        let timer = setInterval(function(){
+            i--
+            btn.innerText = `我已经阅读用户协议(${i})`
+            if(i == 0) {
+                btn.disabled = false
+                
+                clearInterval(timer)
+            }
+        }, 1000)
+    </script>
+</body>
+</html>
