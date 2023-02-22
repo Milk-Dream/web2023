@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 150px;
+            background-color: #f8f8f8;
+            margin: 100px auto;
+            padding-top: 40px;
+        }
+
+        .btns {
+            padding-top: 50px;
+            /* text-align: center; */
+        }
+
+        p {
+            display: inline-block;
+            margin-left: 30px;
+            color: red;
+        }
+
+        span {
+            margin-left: 20px;
+            font-weight: 700;
+            
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>名字是:</span><p>小米</p>
+        <div class="btns">
+            <button id="start">开始</button>
+            <button id="stop">结束</button>
+        </div>
+        
+    </div>
+    <script>
+        let names = ["小黑", "小白", "小红", "小云", "小米"]
+
+        const start = document.querySelector("#start")
+        const stop = document.querySelector("#stop")
+        const p = document.querySelector(".box p")
+
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1) + N)
+        }
+
+        let timer = null;
+        let num = getRandom(0, names.length - 1)
+        start.addEventListener("click", function() {
+            start.disabled = true
+            timer = setInterval(function(){
+                p.innerText = names[num]
+                num = getRandom(0, names.length - 1)
+            }, 50)
+        })
+
+        stop.addEventListener("click", function() {
+            start.disabled = false
+            if(timer) {
+                clearInterval(timer)
+                
+            }
+            names.splice(num, 1)
+
+            if(names.length == 1) {
+                start.disabled = true
+                stop.disabled = true
+            }
+            
+        })
+    </script>
+</body>
+</html>

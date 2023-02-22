@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .box1 {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            line-height: 0;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是广告
+        <div class="box1">X</div>
+    </div>
+    <script>
+        //1.获取事件源
+        const box1 = document.querySelector(".box1")
+        //关闭的是大盒子
+        const box = document.querySelector(".box")
+
+        box1.addEventListener("click", function() {
+            box.style.display = "none"
+        })
+
+    </script>
+</body>
+</html>
