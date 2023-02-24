@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        const name = 1
+        const btn = document.querySelector("button")
+        btn.addEventListener("click", function() {
+            //和上面的name不冲突，因为作用域的问题
+            const name = 2
+            //name = 2 就不可以，因为name = 2，是全局作用域重新赋值就不行
+        })
+    </script>
+</body>
+</html>
