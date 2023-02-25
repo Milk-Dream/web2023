@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <input type="text">
+    <script>
+        const btn = document.querySelector("button")
+        btn.addEventListener("click", function(e) {
+            console.log(e);
+            //事件对象e
+            //type:当前事件类型
+            //clientX/clientY 获取光标相对于浏览器可见窗口左上角的位置
+            //offsetX/offsetY，获取光标相当于DOM元素的左上角的位置
+            //key用户按下键的值，现在不提倡用keyCode
+        })
+
+        const input = document.querySelector("input")
+        input.addEventListener("keyup", function(e) {
+            if (e.key === "Enter") {
+                console.log("我按下了回车键");
+            }
+        })
+    </script>
+</body>
+</html>
