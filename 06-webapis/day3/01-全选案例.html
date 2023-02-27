@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #C0C0C0;
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #D0D0D0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        .allCheck {
+            width: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="allCheck">
+                <input type="checkbox" name="" id="checkAll"><span class="all"></span>
+            </th>
+            <th>商品</th>
+            <th>商家</th>
+            <th>价格</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="check" class="ck"></td>
+            <td>小米手机</td>
+            <td>小米</td>
+            <td>1999</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="check" class="ck"></td>
+            <td>小米电脑</td>
+            <td>小米</td>
+            <td>4999</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="check" class="ck"></td>
+            <td>小米电视机</td>
+            <td>小米</td>
+            <td>19999</td>
+        </tr>
+    </table>
+    <script>
+        //1.获取大复选框
+        const checkAll = document.querySelector("#checkAll")
+        //2.获取所有的小复选框
+        const cks = document.querySelectorAll(".ck")
+
+        //3.点击大复选框，注册事件
+        checkAll.addEventListener("click", function() {
+            //得到当前大复选框的选中状态
+            if(this.checked) {
+                for(let i = 0; i < cks.length; i++) {
+                    cks[i].checked = true
+                }
+            } else {
+                for(let i = 0; i < cks.length; i++) {
+                    cks[i].checked = false
+                }
+            }
+        })
+
+        //4.点击小复选框
+        for(let i = 0; i < cks.length; i++) {
+            cks[i].addEventListener("click", function() {
+                
+                this.checked = this.checked ? true : false
+                /*
+                let num = 0;
+                for(let i = 0; i < cks.length; i++) {
+                    if(cks[i].checked) {
+                        num++
+                    }   
+                }
+                if(num === cks.length) {
+                    checkAll.checked = true
+                } else {
+                    checkAll.checked = false
+                }
+                */
+
+                const checkedCks = document.querySelectorAll(".ck:checked")
+                if(checkedCks.length === cks.length) {
+                    checkAll.checked = true
+                } else {
+                    checkAll.checked = false
+                }
+            })
+        }
+    </script>
+</body>
+</html>
