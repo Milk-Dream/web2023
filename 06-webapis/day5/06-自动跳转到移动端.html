@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        !(function() {
+            //检测userAgent属性(浏览器属性)
+            const userAgent = navigator.userAgent
+            //验证是否为iphone或者Android
+            const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+            const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+            //如果是Android或者iPhone，则跳转到移动端
+            if(android || iphone) {
+                location.href = "http://m.itcast.cn"
+            }
+        })
+        
+    </script>
+</body>
+</html>
