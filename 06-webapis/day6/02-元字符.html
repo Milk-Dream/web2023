@@ -73,6 +73,24 @@
         console.log(/^哈{4,6}$/.test("哈哈哈哈哈"));//true
         console.log(/^哈{4,6}$/.test("哈哈哈哈哈哈"));//truetrue
         console.log(/^哈{4,6}$/.test("哈哈哈哈哈哈哈"));//false
+
+        //字符类 [abc]只能选择一个
+        console.log(/^[abc]$/.test("a"));//true
+        console.log(/^[abc]$/.test("b"));//true
+        console.log(/^[abc]$/.test("c"));//true
+        console.log(/^[abc]$/.test("d"));//false
+        console.log(/^[A-Z]$/.test("p"));//false
+        console.log(/^[A-Z]$/.test("P"));//true
+        console.log(/^[A-Za-z0-9]$/.test("p"));//true
+        console.log(/^[A-Za-z0-9]$/.test("1"));//true
+        
+
+        //\w 数字字母下划线
+        //\W非数字字母下划线
+        //\d 数字
+        //\D 非数字
+        //\s 换行空格制表符
+        //\S 非空格字符
     </script>
 </body>
 </html>
