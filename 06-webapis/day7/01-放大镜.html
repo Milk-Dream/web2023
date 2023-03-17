@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //图片400*400 遮罩200*200
+        const div = document.querySelector("div")
+        div.addEventListener("mousemove", function() {
+            let x = e.pageX - div.getBoundingClientRect().left
+            let y = e.pageY - div.getBoundingClientRect().top - document.documentElement.scrollTop
+            if(x >= 0 && x <=400 && y >= 0 && y<=400) {
+                let mx = 0, my = 0
+                if (x < 100) mx = 0
+                if (x >=100 && x <= 300) mx = x - 100
+                if (x > 300) mx = 0
+
+                if (y < 100) my = 0
+                if (y >=100 && y <= 300) my = y - 100
+                if (y > 300) my = 0
+                layer.style.left = mx + "px"
+                layer.style.top = my + "px"
+
+                //大盒子要跟中等盒子移动
+                large.style.backgroundPositionX = -2 * mx + "px"
+                large.style.backgroundPositionY = -2 * my + "px"
+            }
+        })
+        
+    </script>
+</body>
+</html>
