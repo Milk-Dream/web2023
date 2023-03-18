@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //垃圾回收机制 简称GC
+        //不再用到的内存，没有被释放，叫做内存泄漏
+        //内存的生命周期:1.内存分配2.内存使用3.内存回收
+        //全局变量一般不会回收(关闭页面收)
+        //一般情况局部变量不再使用，将会被回收
+        let num = 10
+        function fn() {
+            const str = "andy"
+            console.log(str);
+        }
+
+        //为什么调用多次，const可以多次使用
+        fn()
+        fn()
+        fn()
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //局部作用域分为函数作用域和快作用域
+        for (let i = 0; i < 3; i++) {
+            //块作用域
+            console.log(i);
+        }
+        console.log(i);//无法访问
+
+        //let 和 const 会产生块作用域
+        //var 声明的不会产生作用域
+
+        for (let i = 0; i < 3; i++) {
+            //块作用域
+            console.log(i);
+            for(let i = 1; i < 3; i++) {
+                console.log(i);
+            }
+        }
+
+        if(true) {
+            let i = 3
+            console.log(i)
+        }
+        console.log(i);//不能访问
+    </script>
+</body>
+</html>
