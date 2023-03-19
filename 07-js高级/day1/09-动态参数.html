@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arguments 动态参数
+        //arguments是什么? 只存在数组当中，是一个伪数组1
+
+        function sum() {
+            let s = 0
+            for (let i = 0; i < arguments.length; i++) {
+                //伪数组
+                s+= arguments[i]
+            }
+            return s
+        }
+
+        sum(1, 2)
+        sum(1, 2, 3)
+        sum(1, 2, 3, 4)
+    </script>
+</body>
+</html>

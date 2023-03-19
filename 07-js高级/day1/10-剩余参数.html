@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //...是个语法符号，置于最末函数形参之前，用于获取多余的参数
+        //借助...获取的形参，是个真数组
+        function getSum(...arr) {
+            let s = 0
+            for(let i = 0; i < arr.length; i++) {
+                s += arr[i]
+            }
+        }
+
+
+        getSum(1, 2, 3)
+        getSum(2, 4, 6)
+    </script>
+</body>
+</html>

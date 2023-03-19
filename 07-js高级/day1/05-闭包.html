@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //闭包 = 里层函数调用外层函数的变量
+        //闭包会引起内存泄漏
+        /*function other() {
+            let i = 1
+            function fn() {
+                console.log(i);
+            }
+            fn()
+        }
+        other()
+        */
+       //外面要使用这个1
+        function other() {
+            let i = 1
+            function fn() {
+                console.log(i);
+            }
+            return fn
+        }
+        const fun = other()
+        fun() //调用函数
+
+        //常见的写法
+        function o() {
+            let a = 10
+            return function() {
+                console.log(a);
+            }
+        }
+
+        const fun1 = o()
+        fun1()
+
+        function m() {
+            let c = 100
+            return function() {
+                return c
+            }
+        }
+
+        const fun2 = m()
+        fun2()
+    </script>
+</body>
+</html>
