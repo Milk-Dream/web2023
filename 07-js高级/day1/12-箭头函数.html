@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //箭头函数最适合本来需要匿名函数的地方
+        const fn = function () {
+            console.log(123);
+        }
+
+        //箭头函数
+        const fn1 = () => {
+            console.log(123);
+        }
+
+        //传递参数
+        const fn2 = (x) => {
+            console.log(x);
+        }
+
+        //只有一个参数小括号可以省略
+        const fn3 = x => {
+            console.log(x);
+        }
+
+        //只有一行代码的时候可以省略大括号
+        const fn4 = x => console.log(x);
+
+        const fn5 = x => {
+            return x + x
+        }
+
+        //可以省略return语句
+        const fn6 = x => x + x
+
+        //直接返回对象
+        const fn7 = (uname) => ({uname: uname})
+    </script>
+</body>
+</html>

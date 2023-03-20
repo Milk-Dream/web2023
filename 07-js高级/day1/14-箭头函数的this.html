@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //箭头函数没有this.他会沿着上一层函数的this指向
+        //DOM事件addEventListener("click")不太推荐使用箭头函数，因为指向window
+        console.log(this);//window
+
+        //普通函数
+        function fn() {
+            console.log(this);//window
+
+        }
+
+        window.fn()
+
+
+        const obj = {
+            name: "andy",
+            sayHi: function() {
+                console.log(this);//obj
+            }
+        }
+
+        obj.sayHi()
+
+        //2.箭头函数的this
+        const fn1 = () => {
+            console.log(this);//window
+        }
+
+        fn()
+
+        //对象方法的箭头函数this
+        const obj1 = {
+            uname: "pink老师",
+            sayHi: () => {
+                console.log(this); //window
+            }
+        }
+
+        obj.sayHi()
+
+        const obj2 = {
+            uname: "pink老师",
+            sayHi: function() {
+                console.log(this);//obj
+                let i = 10
+                const count = () => {
+                    console.log(this); //obj
+                }
+
+                count()
+
+            }
+        }
+
+        obj.sayHi()
+
+    </script>
+</body>
+</html>
