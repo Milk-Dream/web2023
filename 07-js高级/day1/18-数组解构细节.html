@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.单元值少，变量多
+        const [a, b, c, d] = [1, 2, 3]
+        console.log(a);//1
+        console.log(b);//2
+        console.log(c);//3
+        console.log(d);//undefined
+        //单元值多，变量少的情况
+        const [e, f] = [1, 2, 3]
+        console.log(e);//1
+        console.log(f);//2
+
+        //剩余参数，变量少，单元值多
+        const [g, h, ...m] = [1, 2, 3, 4, 5]
+        console.log(g);//1
+        console.log(h);//2
+        console.log(m);//[3, 4, 5]
+
+        //4.防止undefined传递
+        const [n = 0, l = 0] = [1]
+        console.log(n);//1
+        console.log(l);//0
+
+        //5.按需导入
+        const [s, o, ,p] = [1, 2, 3, 4]
+        console.log(s);//1
+        console.log(o);//2
+        console.log(p);//4
+    </script>
+</body>
+</html>
