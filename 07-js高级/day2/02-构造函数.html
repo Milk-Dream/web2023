@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //构造函数约定函数名字第一个字母大写
+        //构造函数的作用:快速创建多个类似对象
+        function Pig(uname, age) {
+            this.uname = uname
+            this.age = age
+        }
+        //使用new关键字调用函数的行为被称为实例化
+
+        const pepa = new Pig("佩奇", 6)
+        const qiaozhi = new Pig("乔治", 3)
+    </script>
+</body>
+</html>
