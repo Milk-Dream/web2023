@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //reduce累计器
+        //arr.reduce(function(累计值, 当前元素, [,索引号][,源数组]){},起始值)
+        //如果没有起始值，累计值就是数组的第0个
+
+        const arr = [1, 2, 3]
+        arr.reduce(function(prev, item){
+            return prev + item
+        }, 0)
+    </script>
+</body>
+</html>

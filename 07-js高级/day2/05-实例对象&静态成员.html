@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //通过构造函数创建的对象叫做实例对象，实例对象里面的属性和方法称为实例成员
+        function Goods(name, price) {
+            this.name = name
+            this.price = price
+        }
+
+        //静态成员，静态成员是挂载在构造函数上面
+        Goods.num = 10
+        Goods.sayHi = function() {
+            console.log("say Hi ~");
+        }
+    </script>
+</body>
+</html>
