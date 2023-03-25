@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = ["red", "blue", "pink"]
+        const re = arr.find(function(item){
+            return item === "blue"   
+        })
+        console.log(re);//blue
+
+
+        const arr1 = [
+            {
+                name: "小米",
+                price: 1999
+            },
+            {
+                name: "华为",
+                price: 3999
+            }
+        ]
+
+        const re1 = arr1.find(function(item) {
+            return item.name === "小米"
+        })
+
+        console.log(re1);
+    </script>
+</body>
+</html>
