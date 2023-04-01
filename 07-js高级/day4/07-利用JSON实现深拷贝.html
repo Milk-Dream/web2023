@@ -8,10 +8,17 @@
 </head>
 <body>
     <script>
-        //深拷贝
-        //1.递归函数
-        //2.lodash
-        //3.利用JSON
+        const obj = {
+            uname: "小黑",
+            age: 10,
+            hobby: ["乒乓球", "排球"],
+            like: {
+                girl: "小绿"
+            }
+        }
+
+        //把对象转换为JSON字符串
+        const o = JSON.parse(JSON.stringify(obj))
     </script>
 </body>
 </html>

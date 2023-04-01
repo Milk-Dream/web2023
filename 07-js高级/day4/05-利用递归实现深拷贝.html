@@ -10,16 +10,28 @@
     <script>
         const obj = {
             uname: "pink",
-            age: 18
+            age: 18,
+            hobby: ["乒乓球", "足球"],
+            family: {
+                baby: "小pink"
+            }
         }
 
         const o = {}
         //拷贝函数
         function deepCopy(newObj, oldObj) {
             for(let k in oldObj) {
-                //k 属性名 oldObj[k] 属性值
-                newObj[k] = oldObj[k]
-
+                //处理数组的问题
+                if(oldObj[k] instanceof Array) {
+                    newObj[k] = []
+                    deepCopy(newObj[k], oldObj[k])
+                } else if(oldObj[k] instanceof Object) {
+                    newObj[k] = {}
+                    deepCopy(newObj[k], oldObj[k])
+                }else {
+                    //k 属性名 oldObj[k] 属性值
+                    newObj[k] = oldObj[k]
+                }
             }
         }
 
