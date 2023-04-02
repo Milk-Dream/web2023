@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            uname: "pink"
+        }
+        function fn(x, y) {
+            console.log(this);
+        }
+
+        //使用call方法调用函数，同时指定被调用函数中this的值
+        //fun.call(thisArg,arg1,arg2...)
+        //thisArg在fun函数运行时候指定的this值
+        //arg1,arg2传递的其他参数
+        //1.调用函数
+        //2.改变this指向
+        fn.call(obj, 1, 2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>发送短信</button>
+    <script>
+        //bind不会调用函数，但是能改变this指向
+        //但是call和apply会调用函数
+        function fn() {
+            console.log(this);
+        }
+
+        //1.bind不会调用函数
+        //2.能改变this指向
+        const obj = {
+            uname: "小白"
+        }
+
+        //3.返回值是个函数，但是是更改this指向的函数
+        const fun = fn.bind(obj, 1, 2)
+        fun()
+
+
+        //需求，有一个按钮，点击里面就禁用，两秒之后开启
+        const btn = document.querySelector("button")
+        btn.addEventListener("click", function() {
+            //禁用按钮
+            this.disabled = true
+            setTimeout(function() {
+                //在这个普通函数，我们要this由window改为btn
+                this.disabled = false
+            }.bind(this), 2000)
+        })
+    </script>
+</body>
+</html>
