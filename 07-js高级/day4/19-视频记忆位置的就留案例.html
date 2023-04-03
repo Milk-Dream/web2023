@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video video {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .elevator {
+            position: fixed;
+            top: 280px;
+            right: 20px;
+            z-index: 999;
+            background: #FFF;
+            border: 1px solid #e4e4e4;
+            width: 60px;
+        }
+
+        .elevator a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            color: #999;
+        }
+
+        .elevator a.active {
+            color: #1286FF;
+        }
+
+        .outline {
+            padding-bottom: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="http://pip.itcast.cn">
+                <img src="https://pip.itcast.cn/img/logo_v3.29b9ba72.png" alt="">
+            </a>
+        </div>
+        <div class="video">
+            <video controls src="https://v3-xg-web-pc.ixigua.com/3c030a983deca9d32db5b66fadfc2bda/6429cbd9/video/tos/cn/tos-cn-o-0004/db728f5f752f485ca21f0bbe97fa4795/media-video-avc1/?a=1768&ch=0&cr=0&dr=0&er=0&cd=0%7C0%7C0%7C0&cv=1&br=1135&bt=1135&cs=0&ds=2&mime_type=video_mp4&qs=0&rc=ZTs3NTk5ZDVpZDY0NDpmPEBpanZqMzk6ZnM6aTMzNDczM0A0YzUvXi9hNTUxLzBfNi4yYSNwMi5zcjRfLWpgLS1kLS9zcw%3D%3D&l=20230403012912E9F039CC4D0131533CA8&btag=38000"></video>
+        </div>
+        <div class="elevator">
+            <a href="javascript:;" data-ref="video">视频简介</a>
+            <a href="javascript:;" data-ref="video">课程简介</a>
+            <a href="javascript:;" data-ref="video">评论列表</a>
+        </div>
+    </div>
+    <script src="./lodash.js"></script>
+    <script>
+        //ontimeupdate:
+        //1.获取元素 要对视频进行操作
+        const video = document.querySelector("video")
+        video.ontimeupdate = _.throttle(()=>{
+            console.log(video.currentTime);//获取到当前视频时间
+            //把当前的视角存储到本地存储
+            localStorage.setItem("currentTime", video.currentTime)
+
+        }, 1000)
+
+        //打开页面触发事件，就从本地存储里面取出时间，赋值给video.currentTime
+        video.onloadeddata = function() {
+            video.currentTime = localStorage.getItem("currentTime") || 0
+        }
+    </script>
+</body>
+</html>
