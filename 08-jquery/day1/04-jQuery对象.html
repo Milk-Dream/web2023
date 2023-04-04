@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 30px;
+        }
+
+        p {
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>05-jQuery对象</h3>
+    <p>
+        jQuery中利用选择器获取到的并非原生的DOM对象，而是jQuery对象
+    </p>
+    <h4>将原生DOM对象转换成jQuery对象后，便可以调用其实列方法了</h4>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.打印dom和jQuery对象的区别
+        let li = document.querySelector("li")
+        console.log("li:", li);
+        let $li = $("li")
+        console.log("$li:", li);
+        //2.jQuery的方法
+        $li.css("backgroundColor", "hotpink")
+
+        //3.混着用(只是测试而已)
+        // li.css("backgroundColor", "skyblue")
+
+        //4.dom对象转jQuery对象
+        let $li2 = $(li)
+        $li2.css("backgroundColor", "skyblue")
+    </script>
+</body>
+</html>
