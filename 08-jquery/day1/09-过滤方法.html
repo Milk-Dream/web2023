@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h3>过滤方法</h3>
+    <p>对获取到的元素进行过滤，返回的依旧是jQuery对象</p>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <!--引入jQuery-->
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.first方法
+        $("li").first().css("background", "pink")
+        //2.last方法
+        $("li").last().css("background", "yellowgreen")
+        //3.eq方法
+        $("li").eq(1).css("background", "skyblue")
+    </script>
+</body>
+</html>
