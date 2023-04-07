@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 30px;
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h4>18-触发事件</h4>
+    <p>
+        jQuery 中如何通过代码的方式触发绑定事件
+    </p>
+    <!--测试用标签-->
+    <button class="btn">按钮</button>
+    <br>
+    <input type="text" class="text">
+    <!--导入jQuery-->
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.直接触发
+        $(".btn").click(function() {
+            $(this).css("backgroundColor", "skyblue")
+        })
+        $(".btn").click()
+        //2.trigger触发
+        $(".text").on("input", function() {
+            console.log("input触发了");
+        })
+        $(".text").trigger("input")
+        $(".btn").trigger("click")
+        //3.注册自定义事件
+        $(".text").on("itheima-input", function() {
+            console.log("自定义事件触发");
+        })
+        //4.触发自定义事件
+        $(".text").trigger("itheima-input")
+
+    </script>
+</body>
+</html>
