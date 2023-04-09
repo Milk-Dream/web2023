@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 30px;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .box {
+            margin-top: 30px;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>淡入&淡出</h3>
+    <p>jQuery 中封装了元素显示/隐藏的快捷操作，并且支持动画</p>
+    <button class="fade-in">淡入</button>
+    <button class="fade-out">淡出</button>
+    <button class="fade-toggle">淡入&淡出</button>
+
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.4.js"></script>
+
+    <script>
+        //1.fadeIn淡入
+        $(".fade-in").click(function() {
+            $(".box").fadeIn(2000)
+        })
+        //2.fadeOut淡出
+        $(".fade-out").click(function() {
+            $(".box").fadeOut(2000)
+        })
+        //3.fadeToggle淡入&淡出
+        $(".fade-toggle").click(function() {
+            $(".box").fadeToggle(2000)
+        })
+    </script>
+</body>
+</html>

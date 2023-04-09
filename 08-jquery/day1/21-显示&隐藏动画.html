@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 30px;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .box {
+            margin-top: 30px;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>显示&隐藏</h3>
+    <p>
+        jQuery 中封装了元素显示/隐藏的快捷的快捷操作，并且支持动画形式的交互效果
+    </p>
+    <button class="show">显示</button>
+    <button class="hide">隐藏</button>
+    <button class="toggle">显示&隐藏</button>
+    <div class="box"></div>
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.show方法
+        $(".show").click(function() {
+            $(".box").show(1000)
+        })
+
+        //2.hide方法
+        $(".hide").click(function() {
+            $(".box").hide(1000)
+        })
+
+        //3.toggle方法
+        $(".toggle").click(function() {
+            $(".box").toggle(1000)
+        })
+    </script>
+</body>
+</html>
