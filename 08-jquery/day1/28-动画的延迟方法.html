@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin-top: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>13-动画的延迟方法</h3>
+    <p>
+        jQuery
+        不仅可以设置动画的执行速度，还能在动画执行前设置一定的延时
+    </p>
+
+    <button class="animate">自定义动画</button>
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.4.js"></script>
+
+    <script>
+        $(".animate").click(function() {
+            $(".box").delay(2000).fadeOut().delay(1000).slideDown()
+        })
+    </script>
+</body>
+</html>

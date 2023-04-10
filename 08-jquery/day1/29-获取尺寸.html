@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 300px;
+            background-color: pink;
+            padding-top: 25px;
+        }
+
+        .box {
+            
+            margin-left: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            border: 10px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h3>元素大小</h3>
+    <p>
+        由于jQuery对获取元素大小进行了封装，使得获得元素不同形状的大小十分方便
+    </p>
+
+    <div class="outer">
+        <div class="box"></div>
+    </div>
+
+    <hr>
+    <button class="content">内容大小</button>
+    <button class="padding">包含内边距大小</button>
+    <button class="border">包含边框大小</button>
+    <button class="margin">包含外边距大小</button>
+
+    <script src="./jquery-3.6.4.js"></script>
+
+    <script>
+        //1.获取元素内容区域大小
+        $(".content").click(function() {
+            let width = $(".box").width()
+            let height = $(".box").height()
+            console.log("widht", width);
+            console.log("height", height);
+        })
+        //2.获取元素内容区域+内边距大小
+        $(".padding").click(function() {
+            let width = $(".box").innerWidth()
+            let height = $(".box").innerHeight()
+            console.log("widht", width);
+            console.log("height", height);
+        })
+
+        //3.获取元素内容区域+内边距+边框大小
+        $(".border").click(function() {
+            let width = $(".box").outerWidth()
+            let height = $(".box").outerHeight()
+            console.log("widht", width);
+            console.log("height", height);
+        })
+        //4.获取元素内容区域+内边距+边框大小+外边距大小
+        $(".margin").click(function() {
+            let width = $(".box").outerWidth(true)
+            let height = $(".box").outerHeight(true)
+            console.log("widht", width);
+            console.log("height", height);
+        })
+    </script>
+</body>
+</html>

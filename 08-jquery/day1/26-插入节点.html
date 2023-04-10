@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: pink;
+            
+        }
+
+        .container img {
+            margin: 0 5px;
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>节点操作</h3>
+    <p>
+        jQuery
+        中封装了在指定位置动态添加元素节点的方法。可以新增节点或者改变节点位置
+    </p>
+    <div class="insert">
+        <h4>01-插入节点</h4>
+        <button class="append">父元素结尾添加</button>
+        <button class="prepend">父元素开头添加</button>
+        <button class="before">兄弟元素前添加</button>
+        <button class="after">兄弟元素后添加</button>
+    </div>
+    <hr>
+    <div class="move">
+        <h4>02-改变位置</h4>
+        <button class="append">去父元素结尾</button>
+        <button class="prepend">去父元素开头</button>
+        <button class="before">去兄弟元素前</button>
+        <button class="after">去兄弟元素后</button>
+    </div>
+    <hr>
+    <div class="container">
+        <img class="Amumu" src="./images/1.png" alt="">
+        <img class="Teemo" src="./images/2.png" alt="">
+        <img class="Kennen" src="./images/3.png" alt="">
+    </div>
+    <img src="./images/logo.png" alt="" class="doge">
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.父元素结尾插入节点
+        $(".insert .append").click(function() {
+            //创建dom元素
+            // let img = document.createElement("img")
+            // img.src = "./images/4.png"
+            // $(".container").append(img)
+
+            //html结构
+            $(".container").append("<img src='./images/4.png'>")
+        })
+        //2.为父元素开头添加
+        $(".insert .preend").click(function() {
+            //创建dom元素
+            // let img = document.createElement("img")
+            // img.src = "./images/4.png"
+            // $(".container").append(img)
+
+            //html结构
+            $(".container").prepend("<img src='./images/5.png'>")
+        })
+        //3.兄弟元素前插入节点
+        $(".insert .before").click(function() {
+            //创建dom元素
+            // let img = document.createElement("img")
+            // img.src = "./images/4.png"
+            // $(".container").append(img)
+
+            //html结构
+            $(".Teemo").before("<img src='./images/logo.png'>")
+        })
+        //3.兄弟元素后插入节点
+        $(".insert .after").click(function() {
+            //创建dom元素
+            // let img = document.createElement("img")
+            // img.src = "./images/4.png"
+            // $(".container").append(img)
+
+            //html结构
+            $(".Teemo").after("<img src='./images/next.png'>")
+        })
+
+        //5.移动到父元素结尾
+        $(".move .append").click(function() {
+            // $(".container").append(document.querySelector(".doge"))
+            //jQuery对象
+            $(".container").appedn($(".doge"))
+        })
+
+        //5.移动到父元素开头
+        $(".move .append").click(function() {
+            // $(".container").append(document.querySelector(".doge"))
+            //jQuery对象
+            $(".container").prepend($(".doge"))
+        })
+
+        //5.移动到兄弟元素前
+        $(".move .append").click(function() {
+            // $(".container").append(document.querySelector(".doge"))
+            //jQuery对象
+            $(".Teemo").before($(".doge"))
+        })
+
+        //5.移动到兄弟元素后
+        $(".move .append").click(function() {
+            // $(".container").append(document.querySelector(".doge"))
+            //jQuery对象
+            $(".Teemo").after($(".doge"))
+        })
+    </script>
+</body>
+</html>

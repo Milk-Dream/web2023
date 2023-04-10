@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin-top: 20px;
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>动画的回调函数</h3>
+    <p>所有的jQuery动画方法都支持传入的回调函数</p>
+    <button class="simple">简单动画</button>
+    <button class="animate">自定义动画</button>
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        //1.简单动画的回调函数
+        $(".simple").click(function(){
+            $(".box").fadeOut(2000, function(){
+                console.log("淡出了");
+                console.log(this);
+            })
+
+        })
+        //2.自定义动画的回调函数
+        $(".animate").click(function(){
+            $(".box").animate({width:400}, 2000, function() {
+                console.log("变宽啦");
+                console.log(this);
+            })
+        })
+    </script>
+
+</body>
+</html>
