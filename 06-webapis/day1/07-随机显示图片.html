@@ -10,7 +10,7 @@
     <img src="./images/course01.png" alt="">
     <script>
         function getRandom(N, M) {
-            return Math.floor(Math.random() * (M * N + 1) + N)
+            return Math.floor(Math.random() * (M - N + 1) + N)
         }
         //1.获取图片列表
         const img = document.querySelector("img")

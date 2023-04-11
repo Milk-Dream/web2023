@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin-top: 10px;
+            width: 500px;
+            height: 100px;
+            background-color: yellowgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>事件参数</h3>
+    <p>
+        jQuery提供了节点直接删除自己的办法
+    </p>
+
+    <hr>
+    <button class="add">添加元素</button>
+    <div class="box">
+        <img src="./images/1.png" alt="" class="dog">
+        <img src="./images/1.png" alt="" class="dog">
+        <img src="./images/1.png" alt="" class="dog">
+        <img src="./images/1.png" alt="" class="dog">
+    </div>
+
+    <script src="./jquery-3.6.4.js"></script>
+
+    <script>
+        //1.减少事件的注册
+        // $(".dog").click(function() {
+        //     $(this).remove()
+        // })
+        $(".box").on("click", ".dog", function() {
+            console.log(this);
+            $(this).remove()
+        })
+
+        //2.新增后代元素的事件绑定
+        $(".add").click(function() {
+            $(".box").append('<img src="./images/1.png" alt="" class="doge">')
+        })
+
+        $(".box").on("click", ".doge", function() {
+            console.log(this);
+        })
+        //3.原理是事件冒泡
+        $(".dog").click(function(e) {
+            e.stopPropagation()
+        })
+    </script>
+</body>
+</html>

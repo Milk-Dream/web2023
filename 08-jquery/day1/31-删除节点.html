@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: yellowgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h3>删除节点</h3>
+    <p>
+        jQuery提供了节点直接删除自己的方法
+    </p>
+    <hr>
+    <div class="box">
+        <button class="remove">删除自己</button>
+        <button class="remove-box">删除父元素</button>
+    </div>
+
+    <script src="./jquery-3.6.4.js"></script>
+
+    <script>
+        //1.删除自己
+        $(".remove").click(function() {
+            $(this).remove()
+        })
+        //2.删除父元素
+        $(".remove-box").click(function() {
+            $(this).parent().remove()
+        })
+
+
+    </script>
+</body>
+</html>
