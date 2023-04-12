@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./slick.css">
+    <link rel="stylesheet" href="./slick-theme.css">
+    <style>
+        body {
+            background-color: #CCC;
+        }
+
+        .slider {
+            width: 640px;
+            height: 360px;
+            margin: 0 auto;
+        }
+
+        .control {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .prev,
+        .next {
+            font-size: 40px;
+            color: red;
+        }
+
+        .slick-dots {
+            bottom: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>03-轮播图插件</h3>
+    <p>学习使用jQuery的轮播图插件slick</p>
+    <!--测试用标签-->
+    <div class="slider-container">
+        <!--轮播图区域-->
+        <div class="slider">
+            <div><img src="./images/1.png" alt=""></div>
+            <div><img src="./images/2.png" alt=""></div>
+            <div><img src="./images/3.png" alt=""></div>
+            <div><img src="./images/4.png" alt=""></div>
+            <div><img src="./images/5.png" alt=""></div>
+        </div>
+        <!--自定义左右箭头-->
+        <div class="control">
+            <div class="prev">上一个</div>
+            <div class="next">下一个</div>
+        </div>
+    </div>
+    <script src="./jquery-3.6.4.js"></script>
+    <script src="./slick.js"></script>
+
+    <script>
+        //autoplay轮播图自动播放true/false
+        //arrows是否显示翻页按钮 true/false
+        //prevArrow 自定义上一页按钮
+        //nextArrow 自定义下一页按钮
+        //dots 是否显示指示器 true/false
+        //appendDots:".incledes"
+        $(".slider").slick({
+            autoplay:true,
+            // arrows: false,
+            prevArrow: ".prev",
+            dots:true
+        })
+    </script>
+</body>
+</html>

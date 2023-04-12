@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fullpage.css">
+    <style>
+        div:nth-child(0) {
+            background-color: yellowgreen;
+        }
+
+        div:nth-child(1) {
+            background-color: skyblue;
+        }
+
+        div:nth-child(2) {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">区域一</div>
+        <div class="section">区域二</div>
+        <div class="section">区域三</div>
+    </div>
+    <!--导入jQuery-->
+    <script src="./jquery-3.6.4.js"></script>
+    <!--在jQuery之后导入fullpage插件-->
+    <script src="./fullPage.js"></script>
+    <script>
+        //navigation 是否显示导航 true/false
+        //navigationPosition 导航位置 right/left
+        //anchors 每个区域的锚链接名 [] 在地址栏
+        //afterLoad 区域加载完毕的回调函数，有两个参数 
+        $("#fullpage").fullpage({
+            navigation: true,
+            navigationPosition: "left",
+            anchors: ["one", "two", "three"],
+            afterLoad(anchor,index) {
+                console.log("anchor:", anchor);
+                console.log("index:", index);
+            }
+        })
+    </script>
+</body>
+</html>
