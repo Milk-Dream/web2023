@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./datepicker.min.css">
+    <style>
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h3>09-日期选择器</h3>
+    <p>
+        jQuery的日期选择器插件datepicker,让用户在不同的浏览器下可以用一致的方式来选择日期
+    </p>
+    <!--准备html结构-->
+    <input type="text" class="datepicker">
+    <!--导入jQuery-->
+    <script src="./jquery-3.6.4.js"></script>
+    <!--导入日期选择器插件-->
+    <script src="./datepicker.min.js"></script>
+    <!--导入语言包-->
+    <script src="./datepicker.zh-CN.js"></script>
+    <script>
+        //autoPick是否自动选择当前日期
+        //autoHide选择日期之后是否自动关闭
+        //language 语言模式 结合语言包来使用
+        $(".datepicker").datepicker({
+            language:"zh-CN",
+            autoPick:true,
+            autoHide:true
+        })
+    </script>
+</body>
+</html>
