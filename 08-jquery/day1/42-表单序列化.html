@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: #333;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-left: 41px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h3>元素位置</h3>
+    <p>
+        jQuery中封装了快速获取表单数据的方法
+        ，叫做序列化
+    </p>
+    <!--测试标签-->
+    <form action="">
+        昵称: <input type="text" name="nickname">
+        <br>
+        爱好 <input type="text" name="hobby">
+        <br>
+        好友 <input type="text" name="friend">
+        <button>提交</button>
+        
+    </form>
+    <!--导入jQuery-->
+    <script src="./jquery-3.6.4.js"></script>
+    <script>
+        $("form").submit(function(event) {
+            //event.preventDefault()
+            let data = $(this).serialize()
+            console.log("data:", data);
+
+
+            return false
+        })
+    </script>
+</body>
+</html>
