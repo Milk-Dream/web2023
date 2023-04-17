@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E33333;
+}
+
+body {
+    background: url(../images/bg.png) no-repeat 0 0 / cover;
+}
+
+.viewport {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 1.1rem .25rem 0;
+    background: url(../images/bg.png) no-repeat 0 0/contain;
+    min-height: 780px;
+}
