@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //获取Git仓库的两种方式
+        //1.将本地初始化仓库 git init
+
+        //检查文件状态
+        //git status
+        //以精简的方式显示文件状态 -s --short的简写
+
+        //跟踪新文件
+        //git add index.html
+
+        //清空clear
+
+        //提交更新
+        //git commit -m "新建了index.html文件"
+
+        //撤销对文件的修改
+        //git checkout -- index.html
+
+        //如果需要从暂存区移除对应文件
+        //git reset HEAD 要移除的文件名称
+
+        //跳过添加到暂存区 
+        //git commit -a -m "描述信息"
+
+        //从git仓库中移除对应的文件
+        //git rm -f index.js
+        //只从git仓库移除文件，但是保留工作区中对应文件
+        //git rm --cached index.js
+
+        //忽略文件.gitignore
+        //#开头是注释
+        // /结尾是目录
+        // /开头防止递归
+        // !开头表示取反
+        // 可以使用glob模式进行文件和文件夹的匹配
+        // ①星号*匹配零个或者多个任意字符
+        // ②[abc]匹配任何一个列在方括号中的字符(此案例匹配一个a或者匹配一个b或者匹配一个c)
+        //③问号?只匹配一个任意字符
+        //④在方括号中使用短划线分割两个字符，表示所有在这两个字符范围内的都可以匹配(比如[0-9]表示匹配所有0到9的数字)
+        //⑤两个星号**表示匹配任意中间目录(比如a/**/z可以匹配a/b/z或者a/b/c/z)
+
+        //.gitignore文件的列子
+        `
+        #忽略所有的.a文件
+        *.a
+
+        #但跟踪所有的lib.a，即使你在前面忽略了.a文件
+        !lib.a
+
+        #只忽略当前目录下的TODO文件，而不忽略subdir/TODO
+        /TODO
+
+        #忽略任何目录下名为build的文件
+        build/
+
+        #忽略doc/notes.txt，但是不忽略doc/server/arch.txt
+        doc/*.txt
+
+        #忽略doc/目录及其所有子目录下的.pdf文件
+        doc/**/*.pdf
+        `
+
+        //查看提交历史
+        //git log
+        //值展示最新的两条提交历史，数字可以按需进行填写
+        //git log -2
+        //在一行上展示最近两条提交历史的信息
+        //git log -2 --pretty=oneline
+
+        //在一行上展示最近两条提交历史信息，并且自定义输出的格式
+        //%h提交的简写哈希值 %an作者名字 %ar作者修订日期，按多久以前的方式显示 %s提交说明
+        //git log -2 --pretty=format:"%h | %an | %ar | %s"
+
+        //回退到指定版本
+        //在一行上展示所有的提交历史
+        //git log --pretty=oneline
+
+        //使用git reset --hard 命令根据提交ID回退到指定版本
+        //git reset --hard <CommitID>
+
+        //在旧版本中使用git reflog --pretty=oneline 命令，查看命令操作的历史
+
+        //再次根据最新的提交ID，跳转到最新的版本
+        //git reset --hard <CommitID>
+    </script>
+</body>
+</html>
