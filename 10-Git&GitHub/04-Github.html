@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //https 零配置，但是每次访问都要登录
+        //ssh 需要额外配置，但是配置好后就不需要输入账号和密码
+        //粘贴如下命令，并将your_email@example.com替换为注册的GitHub账号时候的邮箱
+        //ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+        //连续敲击3次回车，即可在C:\Users\用户名文件夹\.ssh目录中生成id_rsa和id_rsa.pub两个文件
+
+        //打开id.rsa.pub文件，复制里面的内容
+        //浏览器打开GitHub，点击头像->Settings->SSH and GPG Keys -> New SSH key
+        //Title文本框中任意填写一个名称，来标识这个key从何而来
+
+        //检测Github的SSH Key是配置成功
+        //ssh -T git@github.com
+
+        //克隆远程仓库地址
+        //git clone 仓库地址
+    </script>
+</body>
+</html>
