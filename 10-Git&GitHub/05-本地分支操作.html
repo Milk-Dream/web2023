@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //查看分支列表 git branch
+        //创建新分支git branch 分支名称
+        //切换分支git checkout login
+        //-b表示创建一个新的分支，使用如下命令，可以创建指定名称的新分支，并且立即切换到分支git checkout -b 分支名称
+
+        //功能分支的代码开发测试完毕之后，可以使用如下命令，将完成后的代码合并到master主分支上
+        //git merge login
+
+        //删除分支git branch -d 分支名称
+
+        //遇到冲突的分支的时候
+        //git checkout master
+        //git merge reg
+        //打开文件解决冲突
+        //git add .
+        //git commit -m ""
+
+        //如果第一次将本地分支推送到远程仓库，需要运行如下命令
+        //git push -u 远程仓库的别名 本地分支名称:远程分支名称
+        //实际案例
+        //git push -u origin payment:pay
+
+        //如果希望远程分支的名称和本地分支名称一致，可以对命令进行简化
+        //git push -u origin payment
+        //只有第一次才要加-u参数，此后可以直接使用git push
+
+        //查看远程仓库中所有的分支列表
+        //git remote show 远程仓库名称
+
+        //跟踪分支，从远程仓库，吧远程分支下载到本地仓库中
+        //从远程仓库中，把对应远程分支下载到本地仓库，保持本地分支和远程分支名称相同
+        //git checkout 远程分支名称
+        //git checkoput pay
+        //从远程仓库中，吧对应的远程分支下载到本地仓库，并把下载的分支
+        //git checkout -b 本地分支名称 远程仓库名称/远程分支名称
+        //git checkout -b payment origin/pay
+
+        //拉取远程分支的最新代码
+        //git pull
+
+        //删除远程仓库名称
+        //git push 远程仓库名 --delete 远程分支名
+        //git push origin --delete register
+
+        //git branch -D reg 不管有没有合并，强制删除
+    </script>
+</body>
+</html>
