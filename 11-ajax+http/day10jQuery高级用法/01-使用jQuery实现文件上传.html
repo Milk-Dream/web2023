@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery.js"></script>
+</head>
+<body>
+    <input type="file" id="file1">
+    <button id="btnUpload">上传文件</button>
+    <script>
+        $(function() {
+            $("#btnUpload").on("click", function() {
+                const files = $("#file1")[0].files
+                if(files.length <= 0) {
+                   return alert("请选择文件后再点击上传!")
+                }
+                const fd = new FormData()
+                fd.append("avatar", files[0])
+                //发起jQuery的Ajax请求，上传文件
+                $.ajax({
+                    method: "POST",
+                    url: "http://www.liulongbin.top:3006/api/getbooks",
+                    data:fd,
+                    //不修改Content-Type属性，使用FormData默认的Content-Type值
+                    contentType: false,
+                    //不对FormData中的数据进行url编码，而是将FormData的数据原样发送到服务器
+                    processData:false,
+                    success: function(res) {
+                        console.log(res);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
