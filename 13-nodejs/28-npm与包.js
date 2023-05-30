@@ -20,3 +20,9 @@
 //nrm ls
 //将下包的镜像源切换为taobao镜像
 //nrm use taobao
+
+//npm i -D 包名
+//npm i -g 包名 
+//卸载全局包 npm uninstall 包名 -g
+//i5ting_toc 可以把md文档转换为html
+//i5ting_toc -f day1.md -o
