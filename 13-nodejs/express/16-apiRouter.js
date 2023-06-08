@@ -45,6 +45,7 @@ const router = express.Router()
 
 const app = express()
 
+
 app.use(express.urlencoded({extended:true}))
 
 
@@ -66,6 +67,13 @@ router.post("/post", (req, res)=>{
         status:0,
         msg:"POST 请求成功",
         data:body
+    })
+})
+router.delete("/delete", (req, res)=>{
+    
+    res.send({
+        status:0,
+        msg:"POST 请求成功"
     })
 })
 
