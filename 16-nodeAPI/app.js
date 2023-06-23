@@ -8,6 +8,9 @@ const cors = require("cors")
 app.use(cors())
 //配置解析白哦的数据的中间件，只能解析application/x-www-form-urlencoded
 app.use(express.urlencoded({extended:false}))
+
+//托管静态资源
+app.use("/uploads",express.static("./uploads"))
 //一定要在路由之前封装res.cc的函数
 app.use((req,res,next)=>{
     res.cc = function(err, status=1) {
@@ -32,7 +35,9 @@ app.use("/my",userinfoRouter)
 //导入并使用文章分类的路由模块
 const artCateRouter = require("./router/artcate")
 app.use("/my/article", artCateRouter)
-
+//导入文章路由模块
+const articleRouter = require("./router/article")
+app.use("/my/article", articleRouter)
 
 //定义错误级别的中间件
 app.use((err,req,res,next) => {
