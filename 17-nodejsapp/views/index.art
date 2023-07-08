@@ -1,0 +1,39 @@
+{{each sounds}}
+{{$index + 1}}
+<td data-singer="{{$value.singer}}">***</td>
+<td data-songname="{{$value.songname}}">***</td>
+{{$value.addtime}}
+{{$value.isshow == "1" ? "开启" : "关闭"}}
+{{/each}}
+
+<a id="show">查看答案</a>
+//查看答案
+$("#songBox).on("click", "#show", ()=>{
+    var $singer = $(this).parent().siblings().eq(1);
+    $singer.text($singer.text() == "***" ? $singer.attr("data-singer") : "***")
+})
+
+$("#source).change(function() {
+    console.log(this.files[0].name)
+    var songFileName = this.files[0].name
+    if(songFileName.includes("-") && songFileName.includes(".mp3")) {
+        var singer = songFileName.split("-")[0].trim();
+        console.log(singer)
+        $("#singer").val(singer)
+        //slice是去掉.mp3
+        var songName = songFileName.split("-")[1].trim().slice(0,-4)
+        $("#songName").val(songName)
+
+    }
+})
+
+$("#uploadForm").on("submit", function(){
+    if($("#singer"),val().trim().length == 0) {
+        alert("歌手名称不能为空")
+        return;
+    }
+    if($("#songname"),val().trim().length == 0) {
+        alert("歌手名称不能为空")
+        return;
+    }
+})
