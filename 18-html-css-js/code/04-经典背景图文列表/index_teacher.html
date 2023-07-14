@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .outer_node {
+            width: 820px;
+            height: 280px;
+            border: 1px solid black;
+            float: left;
+        }
+
+        .outer_node .list_node {
+            width: 260px;
+            height: 278px;
+            float: left;
+        }
+
+        .outer_node .list_node dt img {
+            width: 260px;
+            height: 152px;
+            float: left;
+        }
+        .outer_node .list_node dd {
+            width: 236px;
+            height: 90px;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 18px;
+            padding-bottom: 16px;
+            border: 2px solid #FDFDFD;
+            border-top: none;
+        }
+        .outer_node .list_node dd .dd_title {
+            font-size: 12px;
+            width: 236px;
+            height: 12px;
+            line-height: 12px;
+            float: left;
+        }
+        .outer_node .list_node dd .dd_content {
+            font-size: 12px;
+            width: 236px;
+            line-height: 15px;
+            float: left;
+        }
+
+        .outer_node .list_node dd .line {
+            width: 236px;
+            height: 1px;
+            background-color: #f2f2f2;
+            float: left;
+            margin-top: 21px;
+        }
+
+        .outer_node .list_node dd .dd_share {
+            width: 236px;
+            height: 12px;
+            line-height: 12px;
+            float: left;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+
+        .outer_node .list_node dd .dd_share .dd_share_left {
+            float: left;
+        
+        }
+
+        .outer_node .list_node dd .dd_share .dd_share_right {
+            float: right;
+            height: 11px;
+            width: 11px;
+            background-image: url(./img/icon_share.jpg);
+            background-repeat: no-repeat;
+            background-size: 11px 11px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer_node">
+        <dl class="list_node">
+            <dt>
+                <img src="./img/list_one.jpg" alt="">
+            </dt>
+            <dd>
+                <p class="dd_title">Overall mark</p>
+                <p class="dd_content">Overall markOverallOverall markOverall markOverall mark</p>
+                <div class="line"></div>
+                <div class="dd_share">
+                    <a href="#" class="dd_share_left">Read more</a>
+                    <a href="#" class="dd_share_right"></a>
+                </div>
+            </dd>
+        </dl>
+        
+    </div>
+</body>
+</html>
