@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .outer_node {
+            width: 818px;
+            border: 1px solid #000;
+            float: left;
+        }
+
+        .list_node {
+            width: 260px;
+            height: 278px;
+            float: left;
+        }
+
+        .list_node dt img {
+            width: 260px;
+            height: 152px;
+            float: left;
+        }
+
+        .list_node dd {
+            width: 236px;
+            height: 90px;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 18px;
+            padding-bottom: 16px;
+        }
+
+        .list_node dd .dd_title {
+            font-size: 12px;
+            font-weight: 400;
+            float: left;
+            width: 236px;
+            height: 12px;
+            line-height: 12px;
+        }
+
+        .list_node dd .dd_content {
+            font-size: 12px;
+            font-weight: 400;
+            float: left;
+            width: 236px;
+            line-height: 12px;
+            margin-top: 7px;
+        }
+
+        .list_node dd .dd_line {
+            width: 236px;
+            height: 1px;
+            border: 1px solid #F2F2F2;
+            border-top: none;
+            float: left;
+            margin-top: 21px;
+        }
+
+        .list_node dd .dd_bottom {
+            width: 236px;
+            float: left;
+            margin-top: 8px;
+            height: 12px;
+            line-height: 12px;
+        }
+
+        .list_node dd .dd_bottom .dd_go {
+            font-size: 12px;
+            float: left;
+            color: #CCC;
+        }
+
+        .list_node dd .dd_bottom .dd_share {
+            width: 11px;
+            height: 11px;
+            line-height: 11px;
+            float: right;
+            background:url(./img/icon_share.jpg) no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer_node">
+        <dl class="list_node">
+            <dt>
+                <img src="./img/list_one.jpg" alt="">
+            </dt>
+            <dd>
+                <p class="dd_title">Overall mark</p>
+                <p class="dd_content">Overall markOverall markOverall markOverall markOverall mark</p>
+                <div class="dd_line"></div>
+                <div class="dd_bottom">
+                    <a href="#" class="dd_go">Read more</a>
+                    <a href="#" class="dd_share"></a>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
