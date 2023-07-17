@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background: #14161A;
+        }
+
+        .app {
+            margin-left: 30px;
+            margin-top: 100px;
+        }
+
+        .outer {
+            width: 1439px;
+            height: 491px;
+        }
+
+        .outer .outer_title {
+            width: 1402px;
+            height: 27px;
+            float: left;
+        }
+
+        .outer .outer_title .title_text {
+            font-size: 27px;
+            color: #FFF;
+            float: left;
+            line-height: 27px;
+
+        }
+
+        .outer .outer_title .title_more {
+            font-size: 16px;
+            color: #FFF;
+            float: left;
+            margin-left: 11px;
+            line-height: 27px;
+        }
+
+        .outer .outer_title .title_button {
+            float: right;
+            position: relative;
+            width: 54px;
+            height: 22px;
+            right: 0;
+            bottom: 0;
+        }
+
+        .outer .outer_title .title_button .button_left {
+            position: absolute;
+            left: 0;
+
+        }
+
+        .outer .outer_title .title_button .button_right {
+            position: absolute;
+            right: 0;
+
+        }
+
+        .outer .list_title {
+            width: 1402px;
+            height: 25px;
+            margin: 19px auto;
+            float: left;
+            border-bottom: 2px solid #212326;
+
+        }
+
+        .outer .list_title .list_title_ul {
+            width: 100%;
+            height: 100%;
+            float: left;
+
+        }
+
+        .outer .list_title .list_title_ul li {
+            float: left;
+            width: 222px;
+            height: 100%;
+            position: relative;
+            margin-right: 14px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 16px;
+            color: #AEAFB0;
+
+        }
+
+
+        .outer .list_title .list_title_ul li.end {
+            margin-right: 0;
+        }
+
+        .outer .list_title .list_title_ul li .circle {
+            width: 8px;
+            height: 8px;
+            background: #303136;
+            border: 1px solid #17191D;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: -6px;
+            margin-left: -5px;
+
+        }
+
+        .outer .list_title .list_title_ul li.active {
+            color: #71FA70;
+        }
+
+        .outer .list_title .list_title_ul li .circle.active {
+            background: #71FA70;
+        }
+
+        .outer_content {
+            width: 100%;
+
+        }
+
+        .list_node {
+            width: 222px;
+            height: 351px;
+            float: left;
+            margin-right: 14px;
+
+        }
+
+        .list_node dt {
+            width: 222px;
+            height: 294px;
+            float: left;
+        }
+
+        .list_node dd {
+            width: 222px;
+            height: 57px;
+            float: left;
+            position: relative;
+        }
+
+        .list_node dd .card_title {
+            color: #F6F6F7;
+            font-size: 16px;
+            height: 16px;
+            width: 222px;
+            line-height: 16px;
+            float: left;
+            margin-top: 11px;
+        }
+
+        .list_node dd .card_count {
+            color: #AFAEAD;
+            height: 13px;
+            width: 222px;
+            line-height: 13px;
+            font-size: 13px;
+            margin-top: 12px;
+            float: left;
+        }
+
+        .list_node dd .card_follow {
+            width: 51px;
+            height: 23px;
+            border-radius: 3px;
+            border: 1px solid #170011;
+            background: #02CC54;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            line-height: 23px;
+            font-size: 12px;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <div class="outer">
+            <div class="outer_title">
+                <span class="title_text">即将上线</span>
+                <a href="#" class="title_more">更多新片></a>
+                <div class="title_button">
+                    <a href="#" class="button_left">
+                        <img src="./img/btn_icon_left.png">
+                    </a>
+                    <a href="#" class="button_right">
+                        <img src="./img/btn_icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="list_title">
+                <ul class="list_title_ul">
+                    <li class="active">今日16:00上线
+                        <div class="circle active"></div>
+                    </li>
+                    <li>今日16:00上线
+                        <div class="circle"></div>
+                    </li>
+                    <li>今日16:00上线
+                        <div class="circle"></div>
+                    </li>
+                    <li>今日16:00上线
+                        <div class="circle"></div>
+                    </li>
+                    <li>即将上线
+                        <div class="circle"></div>
+                    </li>
+                    <li class="end">今日16:00上线
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="outer_content">
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+                <dl class="list_node">
+                    <dt>
+                        <img src="./img/img_01.png" alt="">
+                    </dt>
+                    <dd>
+                        <p class="card_title">慕课网学习的好地方</p>
+                        <p class="card_count">2.0万人已预约</p>
+                        <a href="#" class="card_follow">预约</a>
+                    </dd>
+                </dl>
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+
+</html>
