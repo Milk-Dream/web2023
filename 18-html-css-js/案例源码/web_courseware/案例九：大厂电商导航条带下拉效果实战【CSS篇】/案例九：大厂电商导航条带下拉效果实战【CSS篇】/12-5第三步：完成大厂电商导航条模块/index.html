@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel='stylesheet' href="css/reset.css"/>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			/* top start*/
+			.top{
+				height: 31px;
+				background: url(img/top_bg.jpg) repeat-x;
+			}
+			
+			.top .top_content{
+				width: 987px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.top .top_content .left_position{
+				height: 100%;
+				float: left;
+				font-size: 12px;
+				line-height: 31px;
+				color: #a6a6a7;
+				background: url(img/icon_position.jpg) no-repeat left center;
+				padding-left: 18px;
+				margin-left: 8px;
+				cursor: pointer;
+			}
+			.top .top_content .right_lists{
+				float: right;
+				height: 100%;
+			}
+			.top .top_content .right_lists li{
+				float: left;
+				font-size: 12px;
+				line-height: 31px;
+				height: 100%;
+				color: #acacac;
+			}
+			.top .top_content .right_lists li .login_text{
+				float: left;
+			}
+			.top .top_content .right_lists li .icon_login{
+				float: left;
+				color:#f50209;
+				background:url(img/icon_pointer.jpg) no-repeat right center;
+				margin-left: 5px;
+				padding-right: 11px;
+				cursor: pointer;
+			}
+			.top .top_content .right_lists li.first_list{
+				width: 116px;
+				background: url(img/icon_line.jpg) no-repeat right center;
+			}
+			.top .top_content .right_lists li.list_pt{
+				width: 71px;
+				height: 100%;
+				text-align: center;
+				cursor: pointer;
+			}
+			.top .top_content .right_lists li.line_list{
+				width: 2px;
+				background: url(img/icon_line.jpg) no-repeat right center;
+			}
+			.top .top_content .right_lists li.context_list{
+				width: 86px;
+				text-indent: 13px;
+				background: url(img/icon_jt.jpg) no-repeat 67px center;
+				cursor: pointer;
+			}
+			.top .top_content .right_lists li.list_red{
+				color: #f74f4d;
+			}
+			.top .top_content .right_lists li.list_position{
+				position: relative;
+				width: 83px;
+			}
+			.top .top_content .right_lists li.list_position .list_erm{
+				position: absolute;
+				top: 35px;
+				left: 5px;
+				box-shadow: 0 0 3px #b0b0b0;
+			}
+			
+			.top .top_content .right_lists li.my_lists{
+				position: relative;
+			}
+			.top .top_content .right_lists li.my_lists:hover .context_list_hover{
+				display: block;
+			}
+			.top .top_content .right_lists li .context_list_hover{
+				width: 279px;
+				height: 161px;
+				position: absolute;
+				border: 2px #dddddd solid;
+				background: white;
+				top: 31px;
+				left: 4px;
+				display: none;
+				cursor: auto;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_top{
+				width: 74px;
+				height: 31px;
+				border: 2px solid #dddddd;
+				border-bottom:none;
+				position: absolute;
+				left: -2px;
+				top: -33px;
+				
+				color: #e95351;
+				line-height: 27px;
+				text-indent: 7px;
+				
+				background: url(img/icon_top_l.jpg) no-repeat 61px 10px,white;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_setTop{
+				float: left;
+				width: 100%;
+				height: 92px;
+				border-bottom:1px solid #f3f3f3 ;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_setTop .hover_ul{
+				float: left;
+				width: 100%;
+				height: 89px;
+				padding-top: 3px;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_setTop .hover_bottom{
+				height: 66px;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_setTop .hover_ul li{
+				float: left;
+				width: 50%;
+				height: 12px;
+				font-size: 12px;
+				line-height:12px;
+				
+				text-indent: 15px;
+				margin-top: 13px;
+			}
+			.top .top_content .right_lists li .context_list_hover .context_list_hover_setTop .hover_ul li a{
+				color:#c0c0c0;
+			}
+			/* top end*/
+			
+			
+			/*center start*/
+			
+			.center{
+				width: 987px;
+				height: 98px;
+				margin: 0 auto;
+			}
+			.center .logo{
+				float: left;
+				margin: 26px 0 0 5px;
+			}
+			.center .search{
+				width: 491px;
+				height: 73px;
+				float: left;
+				margin-left: 79px;
+				margin-top:25px;
+				
+			}
+			.center .search .search_node{
+				height: 32px;
+				width: 487px;
+				border: 2px solid #e32016;
+			}
+			.center .search .search_node .search_input{
+				border: none;
+				width: 378px;
+				float: left;
+				height: 100%;
+				outline: none;
+				padding:0;
+				font-size: 12px;
+				line-height: 32px;
+				text-indent: 19px;
+			}
+			.center .search .search_node .search_ca{
+				float: left;
+				width: 50px;
+				height: 100%;
+				background: url(img/icon_ca.jpg) no-repeat center center;
+				cursor: pointer;
+			}
+			.center .search .search_node .search_btn{
+				width: 59px;
+				height: 100%;
+				float: left;
+				background: url(img/icon_search.jpg) no-repeat center center,#e2251b;
+				cursor: pointer;
+				
+			}
+			
+			.center .search .content_center_lists{
+				height: 12px;
+				font-size: 12px;
+				line-height: 12px;
+				margin-top: 8px;
+			}
+			.center .search .content_center_lists li{
+				float: left;
+				margin-right:11px;
+			}
+			.center .search .content_center_lists li a{
+				color: #b9b9b9;
+			}
+			.center .shop{
+				float: left;
+				width: 130px;
+				height: 34px;
+				margin-left: 17px;
+				margin-top: 25px;
+				border: 1px solid #f0f0f0;
+				border-left-width:2px;
+				border-right-width:2px;
+				background:url(img/icon_shop.jpg) no-repeat 19px top;
+				font-size: 12px;
+				text-indent: 51px;
+				line-height: 38px;
+				color: #e8463c;
+				cursor: pointer;
+			}
+			/*center end*/
+		</style>
+	</head>
+	<body>
+		<!-- top头部模块 -->
+		<div class='top'>
+			<div class='top_content'>
+				<div class='left_position'>
+					北京
+				</div>
+				<ul class='right_lists'>
+					<li class='first_list'>
+						<span class='login_text'>你好，请登录</span>
+						<span class='icon_login'>免</span>
+					</li>
+					<li class='list_pt'>
+						我的订单
+					</li>
+					<li class='line_list'></li>
+					<li class='context_list my_lists'>
+						我的慕课
+						<div class='context_list_hover'>
+							<div class='context_list_hover_top'>
+								我的慕课
+							</div>
+							<div class='context_list_hover_setTop'>
+								<ol class='hover_ul'>
+									<li>
+										<a href="#">
+											待处理订单
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											待处理订单
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											待处理订单
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											待处理订单
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											待处理订单
+										</a>
+									</li>
+								</ol>
+								<ol class='hover_ul hover_bottom'>
+									<li>
+										<a href="#">
+											我的慕豆
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											我的白条
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											我的慕豆
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											我的白条
+										</a>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</li>
+					<li class='line_list'></li>
+					<li class='context_list list_red'>
+						企业采购
+					</li>
+					<li class='line_list'></li>
+					<li class='context_list'>
+						商家服务
+					</li>
+					<li class='line_list'></li>
+					<li class='context_list'>
+						网站导航
+					</li>
+					<li class='line_list'></li>
+					<li class='list_pt list_position'>
+						手机慕课
+						<img src="img/icon_erm.jpg" class='list_erm'/>
+					</li>
+					<li class='line_list'></li>
+					<li class='list_pt'>
+						网站无导航
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- center -->
+		<div class='center'>
+			<a href="#" class='logo'>
+				<img src="img/logo.jpg"/>
+			</a>
+			<div class='search'>
+				<div class='search_node'>
+					<input type="text" class='search_input' placeholder="蓝牙鼠标"/>
+					<div class='search_ca'></div>
+					<div class='search_btn'></div>
+				</div>
+				<ul class='content_center_lists'>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							健康保障
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			<div class='shop'>
+				我的购物车
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>注册信息</h1>
+    <form action="">
+        <!--表单控件-->
+        <!--个人信息-->
+        <h2>个人信息</h2>
+        <label for="name">姓名:</label><input type="text" id="name" placeholder="请输入真实姓名">
+        <br><br>
+        <label for="pwd">密码:</label> <input id="pwd" type="password" placeholder="请输入密码">
+        <br><br>
+        <label for="repwd">确认密码:</label> <input id="repwd" type="password" placeholder="请输入确认密码">
+        <br><br>
+        <label>性别:</label> <input name="sex" type="radio" id="man"> <label for="man">男</label><input type="radio" name="sex" id="woman" checked> <label for="woman">女</label>
+        <br><br>
+        <label for="city">居住城市:</label>
+        <select id="city">
+            <option>北京</option>
+            <option>上海</option>
+            <option>广州</option>
+            <option>深圳</option>
+            <option>武汉</option>
+        </select>
+        <!--教育经历-->
+        <h2>教育经历</h2>
+        <label for="study">最高学历:</label>
+        <select id="study">
+            <option>博士</option>
+            <option>硕士</option>
+            <option>本科</option>
+            <option>大专</option>
+        </select>
+        <br><br>
+        <label for="school">学校名称:</label> <input type="text" id="school">
+        <br><br>
+        <label for="pro">所学专业:</label> <input type="text" id="pro">
+        <br><br>
+        <label for="time">在校时间:</label>
+        <select id="time">
+            <option>2015</option>
+            <option>2016</option>
+            <option>2017</option>
+            <option>2018</option>
+        </select>
+        --
+        <select>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+        </select>
+        <!--工作经历-->
+        <h2>工作经历</h2>
+        <label for="work">公司名称:</label><input type="text">
+        <br><br>
+        <label for="content">工作描述:</label>
+        <br>
+        <textarea id="content"></textarea>
+        <br><br>
+        <!--协议和按钮-->
+        <input type="checkbox" id="ok"><label for="ok">已阅读并同意以下协议</label>
+        <ul>
+            <li><a href="#">《用户服务协议》</a></li>
+            <li><a href="#">《隐私政策》</a></li>
+        </ul>
+        <br><br>
+        <button type="button">免费注册</button>
+        <button type="reset">重新填写</button>
+    </form>
+</body>
+</html>
