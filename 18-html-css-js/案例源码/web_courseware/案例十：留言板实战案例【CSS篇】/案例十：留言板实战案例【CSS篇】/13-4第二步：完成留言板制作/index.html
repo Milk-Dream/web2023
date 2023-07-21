@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel='stylesheet' type='text/css' href="css/reset.css"/>
+		<style>
+			.outerNode{
+				width: 650px;
+				height: 191px;
+				background: #fffcf5;
+			}
+			
+			.topNode{
+				width: 634px;
+				height: 48px;
+				float: left;
+				margin-left: 16px;
+				border-bottom: 2px solid #ebe1c2;
+				position: relative;
+			}
+			.topNode .topNode_title{
+				float: left;
+				height: 14px;
+				font-size: 14px;
+				line-height: 14px;
+				margin-top: 16px;
+				color: #9e6c00;
+				font-weight: bold;
+			}
+			
+			.topNode .topNode_line{
+				width: 56px;
+				height: 3px;
+				background: #bc8320;
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+			}
+			
+			.bottomNode{
+				width: 620px;
+				height: 107px;
+				float: left;
+				border: 1px solid #eee5b1;
+				margin-left: 16px;
+				margin-top: 20px;
+			}
+			.bottomNode .bottomNode_textNode{
+				float: left;
+				width: 100%;
+				height: 68px;
+				border-bottom:1px solid #eee5b1;
+			}
+			.bottomNode .bottomNode_textNode textarea{
+				width: 502px;
+				height: 48px;
+				float: left;
+				border: none;
+				resize: none;
+				outline: none;
+				padding: 0;
+				padding: 10px;
+			}
+			.bottomNode .bottomNode_textNode .cra{
+				float: left;
+				width: 48px;
+				height: 100%;
+				background:url(img/cra_icon.jpg) no-repeat center center,#f9f7e8;
+				cursor: pointer;
+				border-left:1px solid #ebead5 ;
+			}
+			
+			.bottomNode .bottomNode_textNode .file{
+				float: left;
+				width: 48px;
+				height: 100%;
+				background:url(img/file_icon.jpg) no-repeat center center,#f9f7e8;
+				cursor: pointer;
+				border-left:1px solid #ebead5 ;
+				position: relative;
+			}
+			.bottomNode .bottomNode_textNode .file input{
+				height:100%;
+				width: 100%;
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+			}
+			
+			.bottomNode .bottomNode_icon{
+				float: left;
+				width: 100%;
+				height: 38px;
+			}
+			.bottomNode .bottomNode_icon a{
+				float: left;
+				margin-top: 8px;
+				margin-left: 8px;
+			}
+			
+			.bottomNode .bottomNode_icon .bottom_btn{
+				width: 75px;
+				height: 28px;
+				float: right;
+				margin-top: 4px;
+				margin-right: 4px;
+				border: 1px solid #caab63;
+				background: #dfba6c;
+				border-radius: 1px;
+				font-size: 14px;
+				line-height: 28px;
+				text-align: center;
+				color: #fefffa;
+				cursor: pointer;
+			}
+			.bottomNode .bottomNode_icon .bottom_btn:hover{
+				background: #b39350;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 最外层元素 -->
+		<div class='outerNode'>
+			<div class='topNode'>
+				<div class='topNode_title'>
+					我的说说
+				</div>
+				<div class='topNode_line'></div>
+			</div>
+			<div class='bottomNode'>
+				<div class='bottomNode_textNode'>
+					<textarea></textarea>
+					<div class='cra'></div>
+					<div class='file'>
+						<input type="file"/>
+					</div>
+				</div>
+				<div class='bottomNode_icon'>
+					<a href="#">
+						<img src="img/icon_one.jpg"/>
+					</a>
+					<a href="#">
+						<img src="img/icon_two.jpg"/>
+					</a>
+					<a href="#">
+						<img src="img/icon_three.jpg"/>
+					</a>
+					<div class='bottom_btn'>
+						发表
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

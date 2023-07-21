@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer_node {
+            width: 650px;
+            height: 191px;
+            background-color: #FFFCF5;
+        }
+
+        .outer_node .top_node {
+            width: 634px;
+            height: 48px;
+            float: left;
+            margin-left: 16px;
+            border-bottom: 2px solid #EBE1C2;
+            position: relative;
+        }
+
+        .top_node .top_title {
+            float: left;
+            height: 14px;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 16px;
+            color: #9E6C00;
+            font-weight: 700;
+        }
+
+        .top_node .top_line {
+            width: 56px;
+            height: 3px;
+            background-color: #BC8320;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+        }
+
+        .bottom_node {
+            width: 620px;
+            height: 107px;
+            float: left;
+            border: 1px solid #EEE5B1;
+            margin-left: 16px;
+            margin-top: 20px;
+        }
+
+        .bottom_node .bottom_text_node {
+            float: left;
+            width: 100%;
+            height: 68px;
+            border-bottom: 1px solid #EEE5B1;
+
+        }
+
+        .bottom_node .bottom_text_node .text_node_textarea {
+            outline: none;
+            border: none;
+            padding: 10px;
+            float: left;
+            width: 502px;
+            height: 48px;
+            resize: none;
+
+        }
+
+        .bottom_node .bottom_text_node .text_node_cre {
+            float: left;
+            width: 48px;
+            height: 100%;
+            background: url(./img/cra_icon.jpg) no-repeat center center,#F9F7E8;
+            border-left: 1px solid #EBEAD5;
+            cursor: pointer;
+        }
+
+        .bottom_node .bottom_text_node .text_node_file {
+            float: left;
+            width: 48px;
+            height: 100%;
+            background: url(./img/file_icon.jpg) no-repeat center center,#F9F7E8;
+            cursor: pointer;
+            border-left: 1px solid #EBEAD5;
+            position: relative;
+        
+
+        }
+
+        .bottom_node .bottom_text_node .text_node_file input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            
+        }
+
+        .bottom_node .bottom_tools {
+            float: left;
+            width: 100%;
+            height: 38px;
+        }
+
+        .bottom_node .bottom_tools a {
+            float: left;
+            margin-top: 8px;
+            margin-left: 8px;
+        }
+
+        .bottom_node .bottom_tools .tools_btn {
+            width: 75px;
+            height: 28px;
+            float: right;
+            margin-top: 4px;
+            margin-right: 4px;
+            border: 1px solid #CAAB63;
+            border-radius: 1px;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: center;
+            color: #FEFFFA;
+            cursor: pointer;
+            background-color: #DFBA6C;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer_node">
+        <div class="top_node">
+            <div class="top_title">
+                我的说说
+            </div>
+            <div class="top_line"></div>
+        </div>
+        <div class="bottom_node">
+            <div class="bottom_text_node">
+                <textarea class="text_node_textarea"></textarea>
+                <div class="text_node_cre"></div>
+                <div class="text_node_file">
+                    <input type="file">
+                </div>
+            </div>
+            <div class="bottom_tools">
+                <a href="#">
+                    <img src="./img/icon_one.jpg" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/icon_two.jpg" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/icon_three.jpg" alt="">
+                </a>
+                <div class="tools_btn">发表</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
