@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .top {
+            height: 138px;
+            background-color: #1483FF;
+        }
+
+        .top_content {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+           
+        }
+
+        .top_content .top_logo {
+            float: left;
+            margin: 39px 0 0 1px;
+        }
+
+        .top_content .top_list {
+            float: left;
+            height: 100%;
+            margin-left: 209px;
+        }
+
+        .top_content .top_list li {
+            float: left;
+            margin: 0 23px;
+            font-size: 15px;
+            line-height: 138px;
+            height: 100%;
+        }
+
+        .top_content .top_list li a {
+            color: #FFF;
+            font-size: 15px;
+        }
+
+        .top_content .top_search {
+            width: 219px;
+            height: 51px;
+            float: right;
+            margin-right: 5px;
+            margin-top: 47px;
+            background-color: #47ADF2;
+            border-radius: 25.5px;
+        }
+
+        .top_content .top_search .top_search_input {
+            outline: none;
+            padding: 0;
+            float: left;
+            border: none;
+            width: 141px;
+            height: 100%;
+            margin-left: 21px;
+            background: none;
+            text-indent: 2px;
+            line-height: 51px;
+            font-size: 15px;
+            color: #FFF;
+
+        }
+
+        .top_content .top_search .top_search_btn {
+            float: left;
+            margin-left: 7px;
+            margin-top: 12px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 818px;
+            background: url(./img/banner_bg.png) no-repeat center center,#1b9ffc;
+        }
+
+        .banner .banner_content {
+            height: 100%;
+            width: 1400px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        .banner .banner_content .banner_title {
+            font-size: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            margin-top: 127px;
+            float: left;
+            width: 100%;
+            text-indent: 6px;
+
+        } 
+
+        .banner .banner_content .banner_text {
+            font-size: 57px;
+            line-height: 57px;
+            height: 57px;
+            color: white;
+            float: left;
+            width: 100%;
+            text-indent: 6px;
+            margin-top: 21px;
+            font-weight: 700;
+        } 
+
+        .banner .banner_content .banner_line {
+            height: 4px;
+            width: 505px;
+            float: left;
+            background: white;
+            margin: 28px 0 0 3px;
+        }
+
+        .banner .banner_content .banner_bottom_title {
+            font-size: 33px;
+            line-height: 33px;
+            height: 33px;
+            color: white;
+            float: left;
+            width: 100%;
+            text-indent: 6px;
+            margin-top: 50px;            
+        }
+
+        .banner .banner_content .banner_bottom_text {
+            font-size: 27px;
+            color: white;
+            line-height: 32px;
+            width: 745px;
+            float: left;
+            margin-left: 6px;
+            margin-top: 40px;
+        }
+
+        .banner .banner_content .banner_outer_btn {
+            width: 100%;
+            float: left;
+            height: 70px;
+            margin-top: 95px;
+            margin-left: 4px;
+        }
+
+        .banner .banner_content .banner_outer_btn .banner_btn {
+            float: left;
+            width: 213px;
+            height: 100%;
+            border-radius: 107px;
+            background: url(./img/btn_bg.png) repeat-y;
+            font-size: 23px;
+            line-height: 70px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 27px;
+        }
+
+        .banner .banner_content .banner_outer_btn .btn_one {
+            margin-left: 4px;
+        }
+
+        .banner .banner_content .banner_list {
+            width: 100%;
+            float: left;
+            height: 27px;
+            margin-top: 69px;
+            text-indent: -1px;
+        }
+
+        .banner .banner_content .banner_list li {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            font-size: 20px;
+            color: white;
+            margin-right: 43px;
+            cursor: pointer;
+            position: relative;
+            top: 4px;
+        }
+
+        .banner .banner_content .banner_list li.active {
+            font-size: 27px;
+            line-height: 27px;
+            color: #FDC235;
+            height: 27px;
+            top: 0;
+        }
+
+        .banner .banner_content .banner_position {
+            width: 80px;
+            height: 10px;
+            position: absolute;
+            left: 50%;
+            bottom: 29px;
+            margin-left: -40px;
+        }
+
+        .banner .banner_content .banner_position li {
+            width: 10px;
+            height: 10px;
+            float: left;
+            border-radius: 50%;
+            margin-right: 13px;
+            cursor: pointer;
+            background: white;
+        }
+
+        .banner .banner_content .banner_position li.end {
+            margin-right: 0;
+        }
+
+        .banner .banner_content .banner_position li.active {
+            background: #FE672D;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_content">
+            <a href="#" class="top_logo">
+                <img src="./img/logo_icon.png" alt="">
+            </a>
+            <ul class="top_list">
+                <li>
+                    <a href="#">首页介绍</a>
+                </li>
+                <li>
+                    <a href="#">产品说明</a>
+                </li>
+                <li>
+                    <a href="#">合作发展</a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+                <li>
+                    <a href="#">联系我们</a>
+                </li>
+            </ul>
+            <div class="top_search">
+                <input class="top_search_input" type="text" value="请输入搜索内容">
+                <a href="#" class="top_search_btn">
+                    <img src="./img/search_icon.png" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="banner">
+        <div class="banner_content">
+            <div class="banner_title">
+                MUKE WANG
+            </div>
+            <div class="banner_text">
+                商务金融数据分析
+            </div>
+            <div class="banner_line"></div>
+            <div class="banner_bottom_title">
+                财经报道/第一手股市新闻资讯
+            </div>
+            <div class="banner_bottom_text">
+                I AM A FREELANCE DESIGNER, AND OFTEN RECEIVE SOME OUTSOURCING SERVICES. BEFORE I MEET THE PHOTOGRAPHER, I NEED TO CREATE EACH PICTURE BY MYSELF, WHICH IS TIME-CONSUMING.
+            </div>
+            <div class="banner_outer_btn">
+                <div class="banner_btn btn_one">
+                    立即注册
+                </div>
+                <div class="banner_btn">
+                    申请合作
+                </div>
+            </div>
+            <ul class="banner_list">
+                <li>01</li>
+                <li class="active">02</li>
+                <li>03</li>
+                <li>04</li>
+            </ul>
+            <ul class="banner_position">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li class="end"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
