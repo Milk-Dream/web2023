@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .news {
+            width: 360px;
+            height: 200px;
+            
+            margin: 100px auto;
+        }
+
+        .header {
+            width: 360px;
+            height: 34px;
+            background-color: #EEEEEE;
+            border: 1px solid #DBDEE1;
+            border-left: 0;
+        }
+
+        .header a {
+            display: inline-block;
+            width: 48px;
+            height: 34px;
+            background-color: #FFF;
+            border-top: 3px solid #FF8400;
+            text-align: center;
+            color: #333;
+            border-right: 1px solid #DBDEE1;
+            margin-top: -1px;
+            line-height: 34px;
+            font-size: 12px;
+        }
+
+        .news .body {
+            padding: 5px;
+        }
+
+        .news .body ul li {
+            background-image: url(./img/li.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            padding-left: 15px;
+        }
+
+        .news .body ul li a {
+            background-image: url(./img/img.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            font-size: 12px;
+            color: #666;
+            line-height: 24px;
+            padding-left: 40px;
+        }
+
+        .news .body ul li a:hover {
+            color: #FF8400;
+        }
+    </style>
+</head>
+<body>
+    <!--新闻区域-->
+    <div class="news">
+        <div class="header">
+            <a href="#">新闻</a>
+        </div>
+        <div class="body">
+            <ul>
+                <li> <a href="#">点赞"新农人"温暖的伸手</a> </li>
+                <li> <a href="#">在希望的田野上</a> </li>
+                <li> <a href="#">"中国天眼"又有新发现已在</a> </li>
+                <li><a href="#">点赞"新农人"温暖的伸手</a></li>
+                <li><a href="#">点赞"新农人"温暖的伸手</a></li>
+                <li><a href="#">点赞"新农人"温暖的伸手</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
