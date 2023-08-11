@@ -11,6 +11,7 @@ module.exports = {
     plugins:[new HtmlWebpackPlugin({
         template:"./public/index.html"//告诉webpack使用插件时候，以我们自己的html文件作为模板去
     })],
+    mode:'development',  //production,
     module: {//加载器配置
         rules:[//规则
             {//一个具体的规则对象
