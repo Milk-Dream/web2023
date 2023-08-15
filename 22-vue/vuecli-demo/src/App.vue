@@ -1,9 +1,21 @@
 <template>
     <div>
-        <!--1.变量准备-静态页面铺设-->
-        <h1>{{ msg }}</h1>
-        <!--2.绑定点击事件-->
-        <button @click="btn">逆转世界</button>
+        <!--语法1:
+        v-for="(值变量名,索引变量名) in 目标结构"
+        v-for="值变量名 in 目标结构"
+        想要谁循环就放到谁身上
+        -->
+        <ul>
+            <li v-for="(item,index) in arr">
+                {{ item }} ---- {{ index }}
+            </li>
+        </ul>
+        <!---->
+        <ul>
+            <li v-for="obj in stuArr">
+                <span>{{ obj.name }}</span>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -13,7 +25,15 @@ export default {
 
     data() {
         return {
-            msg:"Hello, World"
+            arr:["小明","小白","小黑"],
+            stuArr:[
+                {
+                    id:1001,
+                    name:"孙悟空",
+                    age:18,
+                    hobby:["飞天"]
+                }
+            ]
         };
     },
 
@@ -22,13 +42,7 @@ export default {
     },
 
     methods: {
-        btn() {
-            //3.截取字符串返回数组
-            let arr = this.msg.split("")
-            //4.翻转
-            arr.reverse()
-            this.msg = arr.join("")
-        }
+        
     },
 };
 </script>
