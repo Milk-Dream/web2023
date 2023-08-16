@@ -1,21 +1,11 @@
 <template>
     <div>
-        <!--语法1:
-        v-for="(值变量名,索引变量名) in 目标结构"
-        v-for="值变量名 in 目标结构"
-        想要谁循环就放到谁身上
-        -->
         <ul>
-            <li v-for="(item,index) in arr">
-                {{ item }} ---- {{ index }}
+            <li v-for="(val,ind) in arr" :key="ind">
+            {{ val }}
             </li>
         </ul>
-        <!---->
-        <ul>
-            <li v-for="obj in stuArr">
-                <span>{{ obj.name }}</span>
-            </li>
-        </ul>
+        <button @click="btn">下标1位置插入新来的</button>
     </div>
 </template>
 
@@ -25,15 +15,7 @@ export default {
 
     data() {
         return {
-            arr:["小明","小白","小黑"],
-            stuArr:[
-                {
-                    id:1001,
-                    name:"孙悟空",
-                    age:18,
-                    hobby:["飞天"]
-                }
-            ]
+            arr:["老大","老二","老三"]
         };
     },
 
@@ -42,7 +24,9 @@ export default {
     },
 
     methods: {
-        
+        btn() {
+            this.arr.slice(1,0,"新来的")
+        }
     },
 };
 </script>
