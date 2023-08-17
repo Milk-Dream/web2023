@@ -1,11 +1,12 @@
 <template>
     <div>
         <ul>
-            <li v-for="(val,ind) in arr" :key="ind">
-            {{ val }}
+            <li v-for="obj in arr" :key="obj.id">
+                {{ obj.name }}
+                <input type="text">
             </li>
         </ul>
-        <button @click="btn">下标1位置插入新来的</button>
+        <button @click="btn">添加一个input</button>
     </div>
 </template>
 
@@ -15,7 +16,20 @@ export default {
 
     data() {
         return {
-            arr:["老大","老二","老三"]
+            arr:[
+                {
+                    name:"老大",
+                    id:50
+                },
+                {
+                    name:"老二",
+                    id:31
+                },
+                {
+                    name:"老三",
+                    id:34
+                }
+            ]
         };
     },
 
@@ -25,7 +39,7 @@ export default {
 
     methods: {
         btn() {
-            this.arr.slice(1,0,"新来的")
+            this.arr.splice(1,0,{name:"老四",id:19})
         }
     },
 };
