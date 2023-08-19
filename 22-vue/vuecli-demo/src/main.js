@@ -5,6 +5,11 @@ Vue.config.productionTip = false
 
 let a = 10
 
+//方式1:全局 - 过滤器
+//任意的.vue文件内"直接"使用
+//语法:Vue.filter("过滤器的名字",值=>处理函数)
+Vue.filter("reverse",(val,s)=>val.split("").reverse().join(s))
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
