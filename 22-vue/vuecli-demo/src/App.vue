@@ -1,9 +1,12 @@
 <template>
     <div>
-        <div>
-            <span>姓名:</span>
-            <input type="text" v-model="full">
-        </div>
+        <ul>
+            <li v-for="val in arr">
+                {{ val }}
+            </li>
+        </ul>
+        
+        <button @click="btn">更改值</button>
     </div>
 </template>
 
@@ -13,36 +16,8 @@ export default {
 
     data() {
         return {
-            
+            arr:[1, 2, 3]
         };
-    },
-    /**
-     * 
-     * 
-     * 完整语法:
-     * computed:{
-     *  "计算属性名"(){},
-     *  "计算属性名":{
-     *      set(值){
-     *      
-     *      },
-     *      get() {
-     *          return 值
-     *      }
-     * }
-     * }
-     */
-    computed: {
-        full:{
-            //给full赋值触发set方法
-            set(val) {
-                console.log(val)
-            },
-            //使用full赋值触发get方法
-            get() {
-                return "无名氏"
-            }
-        }
     },
 
     mounted() {
@@ -50,7 +25,10 @@ export default {
     },
 
     methods: {
-        
+        btn() {
+            this.$set(this.arr,1,100)
+            //this.arr[1] = 100
+        }
     },
 };
 </script>
