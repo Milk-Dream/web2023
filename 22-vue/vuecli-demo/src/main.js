@@ -11,5 +11,6 @@ let a = 10
 Vue.filter("reverse",(val,s)=>val.split("").reverse().join(s))
 
 new Vue({
+ // el:"#app",//vue实例编译后的模版挂载到index.html的id 叫app的标签上
   render: h => h(App),
 }).$mount('#app')
