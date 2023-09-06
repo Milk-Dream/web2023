@@ -24,6 +24,9 @@ const routes = [
   {
     path:"/part",
     component:Part
+  },
+  {
+    path:"/part/:username/:id" //有:的路径代表要接受具体的值
   }
 ]
 
