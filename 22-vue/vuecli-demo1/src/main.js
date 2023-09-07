@@ -7,32 +7,46 @@ import VueRouter from 'vue-router'
 import Find from "@/views/Find" //@是src的绝对路径
 import My from "@/views/My"
 import Part from "@/views/Part"
-
+import NotFound from "@/views/NotFound"
 
 Vue.use(VueRouter)
 
 //4.规则数组
 const routes = [
   {
+    path:"/",//默认hash值路径
+    redirect:"/find"//重定向到find
+
+  },
+  {
     path:"/find",
-    component:Find
+    component:Find,
+    name:"Find"
   },
   {
     path:"/my",
-    component:My
+    component:My,
+    name:"My"
   },
   {
     path:"/part",
-    component:Part
+    component:Part,
+    name:"Part"
   },
   {
     path:"/part/:username/:id" //有:的路径代表要接受具体的值
+  },
+  //404一定要在最后
+  {
+    path:"*",
+    component:NotFound
   }
 ]
 
 //生成路由对象
 const router = new VueRouter({
-  routes:routes//routes是固定key(传入规则数组)
+  routes:routes,//routes是固定key(传入规则数组)
+  mode:"history"
 })
 
 Vue.config.productionTip = false

@@ -1,18 +1,12 @@
 <template>
     <div>
-        <p>关注明星</p>
-        <p>发现精彩</p>
-        <p>寻找伙伴</p>
-        <p>加入我们</p>
-        {{ $router.query.name }}
-        -
-        {{ $router.params.username }}
+        抱歉,资源不存在
     </div>
 </template>
 
 <script>
 export default {
-    name: 'VuecliDemo1Part',
+    name: '22VueNotFound',
 
     data() {
         return {
