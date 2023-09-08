@@ -8,6 +8,10 @@ import Find from "@/views/Find" //@是src的绝对路径
 import My from "@/views/My"
 import Part from "@/views/Part"
 import NotFound from "@/views/NotFound"
+import Recommend from "@/views/Recommend"
+import Ranking from "@/views/Ranking"
+import SongList from "@/views/SongList"
+
 
 Vue.use(VueRouter)
 
@@ -21,7 +25,17 @@ const routes = [
   {
     path:"/find",
     component:Find,
-    name:"Find"
+    name:"Find",
+    children:[
+      {
+        path:"recommend",
+        component:Recommend
+      },
+      {
+        path:"ranking",
+        component:Ranking
+      }
+    ]
   },
   {
     path:"/my",
@@ -47,6 +61,10 @@ const routes = [
 const router = new VueRouter({
   routes:routes,//routes是固定key(传入规则数组)
   mode:"history"
+})
+
+router.beforeEach((to,from,next)=> {
+  console.log(to)
 })
 
 Vue.config.productionTip = false
