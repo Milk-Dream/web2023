@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ nickname }}
+        {{ nickname.toUpperCase() }}
+        {{ age >= 18 ? "成年人": "未成年人" }}
+        {{ friend.name }}
+        {{ friend.desc }}
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                nickname:"tony",
+                age:18,
+                friend: {
+                    name:"小黑老师s",
+                    desc:"行不更名坐不改姓"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ msg }}
+        {{ count }}
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                //响应式数据 -> 一旦数据变化了，视图自动更新
+                msg:"你好,黑马",
+                count:100
+            }
+        })
+
+        //1.访问数据 实列.属性名
+        //2.修改数据 实列.属性名 = 新值
+
+    </script>
+</body>
+</html>
