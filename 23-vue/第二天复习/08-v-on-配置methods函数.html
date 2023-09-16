@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="fn">显示/隐藏标题</button>
+        <p v-show="flag">小白老师s</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data:{
+                flag:true
+            },
+            methods: {
+                fn() {
+                    this.flag = !this.flag
+                }
+            }
+        })
+    </script>
+</body>
+</html>
