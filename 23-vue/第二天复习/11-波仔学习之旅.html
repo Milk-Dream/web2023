@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p><button @click="prev" v-show="index > 0">上一页</button></p>
+        <img :src="list[index]" alt="">
+        <p><button @click="next" v-show="index < this.list.length-1">下一页</button></p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                index:0,
+                list:[
+                    "./imgs/11-00.gif",
+                    "./imgs/11-01.gif",
+                    "./imgs/11-02.gif",
+                    "./imgs/11-03.gif",
+                    "./imgs/11-04.png",
+                    "./imgs/11-05.png",
+                ]
+            },
+            methods: {
+                prev() {
+                    if(this.index <= 0) {
+                        this.index = 0
+                    } else {
+                        this.index--
+                    }
+                },
+                next() {
+                    if(this.index >= this.list.length-1) {
+                        this.index = this.list.length-1
+                    }else {
+                        this.index++
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h4>小白的幸运杂货铺</h4>
+        <ul>
+            <li v-for="(item, index) in booksList" :key="item.id">
+                <span>{{ item.id }}</span>
+                <span>{{ item.name }}</span>
+                <span>{{ item.price }}</span>
+                <button @click="del(item.id)">删除</button>
+            </li>
+        </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                booksList:[
+                    {id:1,name:"《红楼梦》",price:18.8},
+                    {id:2,name:"《如何让富婆爱上我》",price:108.8},
+                    {id:3,name:"《如何泡到富婆》",price:188.8},
+                    {id:4,name:"《富婆通讯录》",price:128.8}
+                ]
+            },
+            methods: {
+                del(id) {
+                    this.booksList = this.booksList.filter((el)=> {
+                        return el.id !== id
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
