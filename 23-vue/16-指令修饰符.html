@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h3>@keyup.enter -> 监听回车事件</h3>
+        <input @keyup.enter="fn" type="text" v-model="username"><br>
+        <h3>@事件名.stop -> 阻止冒泡</h3>
+        <div @click="fatherFn" class="father">
+            <div @click.stop="sonFn" class="son">儿子</div>
+        </div>
+
+        <h3>@事件名.prevent -> 阻止默认行为</h3>
+        <a @click.prevent href="https://www.baidu.com">百度一下</a>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                username: ""
+            },
+            methods: {
+                fn(e) {
+                    /*if(e.key === "Enter") {
+                        console.log("键盘回车的时候触发")
+                    }*/
+                    console.log("键盘回车的时候触发",this.username)
+                },
+                fatherFn() {
+                    alert("父亲被点击了")
+                },
+                sonFn() {
+                    alert("儿子被点击了")
+                }
+            }
+        })
+    </script>
+</body>
+</html>

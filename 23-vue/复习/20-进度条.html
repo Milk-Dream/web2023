@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 350px;
+            height: 25px;
+            background-color: #272425;
+            border: 3px solid #272425;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .inner {
+            width: 50%;
+            height: 25px;
+            background-color: #409EFF;
+            border-radius: 15px;
+            position: relative;
+            text-align: right;
+            transition: all 1.5s;
+        }
+
+        .inner span {
+            position: absolute;
+            right: -20px;
+            bottom: -25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div class="inner" :style="{width:precent+'%'}">
+                <span>{{ precent }}%</span>
+            </div>
+        </div>
+        <button @click="precent = 25">25%</button>
+        <button @click="precent = 50">50%</button>
+        <button @click="precent = 75">75%</button>
+        <button @click="precent = 100">100%</button>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                precent:50
+            }
+        })
+    </script>
+</body>
+</html>
