@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            display: flex;
+            border-bottom: 2px solid #E01222;
+            padding: 0 10px;
+        }
+
+        li {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            list-style: none;
+            text-align: center;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        li a.active {
+            background-color: #E01222;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in list"
+            >
+            <a :class="{active:index===currentIndex}" @click="select(index)" href="#">{{ item.name }}</a>
+                
+            </li>
+        </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                currentIndex:0,
+                list:[
+                    {id:1,name:"今日热搜"},
+                    {id:2,name:"昨日热搜"},
+                    {id:3,name:"前日热搜"}
+                ]
+            },
+            methods: {
+                select(index) {
+                    this.currentIndex = index;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
